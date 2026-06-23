@@ -12,6 +12,7 @@ permissions:
 jobs:
   veille:
     runs-on: ubuntu-latest
+    timeout-minutes: 15       # garde-fou : un run normal dure 1 a 2 min
     steps:
       - name: Recuperer le repo
         uses: actions/checkout@v4
