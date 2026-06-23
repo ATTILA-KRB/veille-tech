@@ -173,7 +173,7 @@ def synthesize(items_by_theme):
     client = Anthropic()
     message = client.messages.create(
         model=MODEL,
-        max_tokens=2500,
+        max_tokens=4000,
         messages=[{"role": "user", "content": build_prompt(items_by_theme)}],
     )
     return "".join(block.text for block in message.content if block.type == "text")
