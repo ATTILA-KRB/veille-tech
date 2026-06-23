@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Rapports générés localement (les rapports CI sont commités dans reports/)
+/veille_*.md
+
+# Réglages locaux Claude Code
+.claude/settings.local.json
