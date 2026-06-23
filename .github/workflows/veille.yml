@@ -13,6 +13,9 @@ jobs:
   veille:
     runs-on: ubuntu-latest
     timeout-minutes: 15       # garde-fou : un run normal dure 1 a 2 min
+    env:
+      # Expose le secret en variable pour tester sa presence dans un "if".
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
     steps:
       - name: Recuperer le repo
         uses: actions/checkout@v4
@@ -25,22 +28,43 @@ jobs:
       - name: Installer les dependances
         run: pip install feedparser anthropic
 
+      - name: Date du jour
+        run: echo "REPORT_DATE=$(date +%F)" >> "$GITHUB_ENV"
+
       - name: Generer le digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           mkdir -p reports
-          python veille.py --hours 24 --out "reports/veille_$(date +%F).md"
+          python veille.py --hours 24 --out "reports/veille_${REPORT_DATE}.md"
 
       - name: Commiter le rapport
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add reports/
-          git diff --staged --quiet || git commit -m "Veille $(date +%F)"
+          git diff --staged --quiet || git commit -m "Veille ${REPORT_DATE}"
           git push
 
+      - name: Envoyer le digest par mail
+        # Ne s'execute que si le secret MAIL_USERNAME est configure (sinon : ignore).
+        if: success() && env.MAIL_USERNAME != ''
+        uses: dawidd6/action-send-mail@v17
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Veille tech — ${{ env.REPORT_DATE }}"
+          to: ${{ secrets.MAIL_USERNAME }}
+          from: "Veille tech <${{ secrets.MAIL_USERNAME }}>"
+          html_body: file://reports/veille_${{ env.REPORT_DATE }}.md
+          convert_markdown: true       # rend le Markdown du rapport en HTML
+          attachments: reports/veille_${{ env.REPORT_DATE }}.md
+
       - name: Publier en artifact
+        if: always()                   # garde l'artifact meme si l'envoi mail echoue
         uses: actions/upload-artifact@v4
         with:
           name: veille-${{ github.run_id }}
