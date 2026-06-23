@@ -31,6 +31,29 @@ Trois accès, au choix :
 - en artifact téléchargeable depuis la page du run (rétention 30 jours) ;
 - via une notification GitHub si tu actives le suivi du dépôt.
 
+## Recevoir le digest par mail (optionnel)
+
+Le workflow peut envoyer le digest **par e-mail** à chaque exécution (corps du
+mail rendu en HTML + rapport `.md` en pièce jointe). L'étape ne s'active que si
+le secret `MAIL_USERNAME` est présent ; sinon elle est ignorée, sans erreur.
+
+Mise en place avec une boîte **Gmail** :
+
+1. Activer la **validation en deux étapes** sur le compte Google (obligatoire
+   pour générer un mot de passe d'application).
+2. Créer un **mot de passe d'application** :
+   `myaccount.google.com` > `Sécurité` > `Mots de passe des applications`.
+   Google génère un code de 16 caractères.
+3. Ajouter deux secrets (`Settings` > `Secrets and variables` > `Actions`) :
+   - `MAIL_USERNAME` : ton adresse Gmail (sert aussi d'expéditeur **et** de
+     destinataire) ;
+   - `MAIL_PASSWORD` : le mot de passe d'application de 16 caractères.
+
+Le prochain run enverra alors le digest dans ta boîte. Pour un **autre
+destinataire** ou un **autre fournisseur SMTP** (Outlook, Brevo, etc.), ajuster
+les champs `to`, `server_address` et `server_port` de l'étape « Envoyer le
+digest par mail » dans `veille.yml`.
+
 ## Réglages
 
 - **Cadence** : modifier la ligne `cron` dans `veille.yml`. Attention, l'heure
