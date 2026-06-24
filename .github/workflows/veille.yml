@@ -2,8 +2,10 @@ name: Veille tech
 
 on:
   schedule:
-    # 06:00 UTC = 08:00 Paris (ete) / 07:00 (hiver). Cron GitHub en UTC.
-    - cron: "0 6 * * 1-5"
+    # 06:17 UTC ~ 08:17 Paris (ete) / 07:17 (hiver). Cron GitHub en UTC.
+    # Minute decalee du top d'heure : les crons a HH:00 sont les plus souvent
+    # retardes ou sautes par le planificateur GitHub (best effort).
+    - cron: "17 6 * * 1-5"
   workflow_dispatch:          # bouton de lancement manuel
 
 permissions:
