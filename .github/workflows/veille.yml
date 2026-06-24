@@ -40,14 +40,8 @@ jobs:
           mkdir -p reports
           python veille.py --hours 24 --out "reports/veille_${REPORT_DATE}.md"
 
-      - name: Commiter le rapport
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/
-          git diff --staged --quiet || git commit -m "Veille ${REPORT_DATE}"
-          git push
-
+      # L'envoi du mail est place AVANT le commit : la livraison du digest
+      # ne depend donc pas du succes du "git push".
       - name: Envoyer le digest par mail
         # Ne s'execute que si le secret MAIL_USERNAME est configure (sinon : ignore).
         if: success() && env.MAIL_USERNAME != ''
@@ -65,8 +59,30 @@ jobs:
           convert_markdown: true       # rend le Markdown du rapport en HTML
           attachments: reports/veille_${{ env.REPORT_DATE }}.md
 
+      - name: Commiter le rapport
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          if git diff --staged --quiet; then
+            echo "Aucun changement a committer."
+            exit 0
+          fi
+          git commit -m "Veille ${REPORT_DATE}"
+          # Pousse en absorbant une eventuelle avance concurrente de la branche
+          # (runs qui se chevauchent, push externe...) : rebase puis nouvelle tentative.
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "Push rejete, rebase sur l'etat distant puis nouvelle tentative ($attempt/3)..."
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          done
+          echo "Echec du push du rapport apres 3 tentatives." >&2
+          exit 1
+
       - name: Publier en artifact
-        if: always()                   # garde l'artifact meme si l'envoi mail echoue
+        if: always()                   # garde l'artifact meme si une etape precedente echoue
         uses: actions/upload-artifact@v4
         with:
           name: veille-${{ github.run_id }}
