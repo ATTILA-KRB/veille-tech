@@ -54,6 +54,33 @@ destinataire** ou un **autre fournisseur SMTP** (Outlook, Brevo, etc.), ajuster
 les champs `to`, `server_address` et `server_port` de l'étape « Envoyer le
 digest par mail » dans `veille.yml`.
 
+## Publier un flux RSS (optionnel)
+
+À chaque run, `make_feed.py` régénère un flux **`docs/feed.xml`** (RSS 2.0, les
+30 derniers digests, contenu complet) et une page **`docs/index.html`**. Pour
+l'exposer publiquement via **GitHub Pages** :
+
+1. `Settings` > `Pages` > **Source** : *Deploy from a branch*.
+2. **Branch** : `claude/admiring-cori-m8qur1` · **Folder** : `/docs` > `Save`.
+3. Après le déploiement, le flux est à :
+   `https://<utilisateur>.github.io/veille-tech/feed.xml`
+
+⚠️ **Disponibilité de Pages** : publier depuis un dépôt **privé** nécessite un
+plan **Pro / Team / Enterprise**. Sur un compte **Free**, soit rendre le dépôt
+**public** (le contenu de la veille n'est pas sensible — aucun secret n'y
+figure), soit héberger le flux dans un dépôt public séparé. Dans tous les cas le
+flux publié est **public**.
+
+> Le nom d'hôte de Pages est en minuscules. Si tu changes de dépôt/compte,
+> mets à jour `FEED_SITE_URL` dans l'étape « Construire le flux RSS » de
+> `veille.yml`.
+
+**Lire le flux depuis une autre boîte mail :**
+- **Outlook** (bureau) : dossier *Flux RSS* > clic droit > *Ajouter un flux RSS*
+  > coller l'URL `…/feed.xml`. Chaque digest arrive comme un message.
+- **Gmail / autre** (pas de RSS natif) : utiliser un service *RSS-to-email*
+  gratuit (Blogtrottr, Feedrabbit…) en y collant l'URL du flux.
+
 ## Réglages
 
 - **Cadence** : modifier la ligne `cron` dans `veille.yml`. Attention, l'heure
