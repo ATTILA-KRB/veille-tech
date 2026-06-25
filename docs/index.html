@@ -13,107 +13,95 @@
 <section id="veille-2026-06-25">
 <h2>Veille tech — 2026-06-25</h2>
 <h1>Veille tech — 2026-06-25</h1>
-<p>Fenetre : 24 h · 141 items collectes</p>
-<h1>Digest de veille — 25 juin 2026</h1>
-<hr />
-<h2>🔒 Cyber</h2>
-<p><strong>Cisco Catalyst SD-WAN — Zero-Day CVE-2026-20245 exploité activement</strong>
-Des attaquants ont obtenu un accès root sur des équipements Cisco SD-WAN via une faille zero-day, révélée par Mandiant après deux mois d'exploitation silencieuse.
-<em>Impact : si le groupe utilise Cisco SD-WAN pour connecter sites industriels, laboratoires ou datacenters, un patch d'urgence et un audit des accès root s'imposent immédiatement.</em>
-<a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html">The Hacker News</a> | <a href="https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/">BleepingComputer</a></p>
-<hr />
-<p><strong>Malicious OpenClaw Skills — Menace sur la chaîne d'approvisionnement AI</strong>
-Des composants malveillants découverts sur ClaWHub (dépôt de skills pour agents IA) peuvent compromettre les pipelines d'IA en production.
-<em>Impact : tout projet pharma intégrant des agents IA via des marketplaces de compétences tierces doit renforcer la validation et le contrôle de provenance des dépendances IA.</em>
-<a href="https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain">Dark Reading</a></p>
-<hr />
-<p><strong>Extension Edge malveillante — Abus du Native Messaging pour déployer des malwares</strong>
-Une extension Microsoft Edge détournée utilise l'API Native Messaging comme pont pour exécuter du code malveillant sur le poste local.
-<em>Impact : les postes de travail pharma sous Edge (accès systèmes GxP, ERP, LIMS) sont potentiellement exposés ; une revue des extensions autorisées et une politique de liste blanche s'imposent.</em>
-<a href="https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/">BleepingComputer</a></p>
-<hr />
-<p><strong>Cordyceps — Failles CI/CD exposant 300+ dépôts GitHub à des attaques supply chain</strong>
-Des vulnérabilités dans des pipelines CI/CD permettent à un attaquant de compromettre des centaines de projets hébergés sur GitHub.
-<em>Impact : les équipes DevOps pharma (développement d'outils analytiques, automatisation réglementaire, code validation) doivent auditer leurs workflows GitHub Actions et contrôler les permissions des runners.</em>
-<a href="https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github-repositories.html">The Hacker News</a></p>
-<hr />
-<p><strong>macOS — Faille permettant aux utilisateurs de désactiver les outils de sécurité</strong>
-Apple présente un gap de sécurité sous macOS permettant à un utilisateur standard de contourner ou désactiver des agents EDR/XDR déployés par l'entreprise.
-<em>Impact : les chercheurs et data scientists pharma travaillant sur Mac peuvent involontairement — ou malicieusement — neutraliser la protection endpoint ; à remonter au SOC et aux équipes Mac management.</em>
-<a href="https://www.darkreading.com/application-security/apple-macos-security-gap-users-disable-security-tools">Dark Reading</a></p>
-<hr />
-<p><strong>Dawn of the Apex Agentic Adversary — Analyse des nouvelles menaces IA offensives</strong>
-Article de fond sur l'émergence d'adversaires utilisant des agents IA autonomes pour conduire des attaques multi-étapes sans intervention humaine.
-<em>Impact : les architectures pharma exposant des APIs (clinical data, ELN, MES) doivent anticiper des scénarios d'attaque automatisés à haute vélocité, au-delà des modèles de menace traditionnels.</em>
-<a href="https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html">The Hacker News</a></p>
+<p>Fenetre : 24 h · 143 items collectes</p>
+<h2>🔐 Cyber</h2>
+<p><strong>Cisco Catalyst SD-WAN — Zero-Day CVE-2026-20245 activement exploité</strong>
+Faille critique permettant un accès root distant, exploitée deux mois avant la divulgation publique selon Mandiant.
+<em>Impact : si des équipements Cisco SD-WAN sont déployés en réseau industriel ou OT/IT pharma, un audit d'exposition et un patch d'urgence s'imposent immédiatement.</em>
+→ https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html</p>
+<p><strong>Extension Edge malveillante via Native Messaging</strong>
+Une extension Microsoft Edge détournée exploite le canal Native Messaging pour servir de pont vers des malwares installés localement.
+<em>Impact : vecteur discret difficile à détecter par les EDR classiques ; à intégrer dans les politiques de gestion des extensions navigateur et les revues de postes utilisateurs.</em>
+→ https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/</p>
+<p><strong>Démantèlement d'Amadey &amp; StealC — 27M de credentials récupérés</strong>
+L'opération Endgame a neutralisé deux réseaux de malwares infostealer majeurs et récupéré 27 millions de credentials volés.
+<em>Impact : vérifier si des comptes d'entreprise figurent dans les dumps via les services de threat intelligence ; risque de credential stuffing sur les portails SaaS et VPN pharma.</em>
+→ https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html</p>
+<p><strong>macOS — Gap permettant à l'utilisateur de désactiver les outils de sécurité</strong>
+Une faille de conception dans macOS permet à un utilisateur standard de contourner ou désactiver certains outils de sécurité tiers.
+<em>Impact : concerne les flottes Mac utilisées par les équipes R&amp;D, bioinformatique ou direction ; nécessite une revue des configurations MDM et des politiques SIP.</em>
+→ https://www.darkreading.com/application-security/apple-macos-security-gap-users-disable-security-tools</p>
+<p><strong>Compétences OpenClaw malveillantes — Menace sur la supply chain IA</strong>
+De nouvelles skills malveillantes découvertes sur ClaWHub, le registre de compétences pour agents IA, compromettent la chaîne d'approvisionnement logicielle IA.
+<em>Impact : tout déploiement d'agents IA en environnement pharma (automatisation, lab, regulatory) doit intégrer une validation systématique des sources de compétences tierces.</em>
+→ https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain</p>
+<p><strong>Failles CI/CD Cordyceps — 300+ dépôts GitHub exposés</strong>
+Des vulnérabilités dans des pipelines CI/CD affectent plus de 300 repositories GitHub, ouvrant la voie à des attaques supply chain.
+<em>Impact : critique pour les équipes DevOps pharma gérant du code de validation, des scripts GxP ou des outils d'analyse ; audit des pipelines et des secrets exposés requis.</em>
+→ https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html</p>
 <hr />
 <h2>💻 IT / Tech</h2>
-<p><strong>CPU et infrastructure IA agentique — Rôle croissant face aux GPU</strong>
-The Register analyse comment les CPU modernes reprennent une place centrale dans les déploiements d'IA agentique, pour l'orchestration et les workloads d'inférence légère.
-<em>Impact : pour les équipes pharma déployant des agents IA on-premise (validation, analyse documentaire réglementaire), cela ouvre des options d'infrastructure moins coûteuses et plus conformes que le full-GPU cloud.</em>
-<a href="https://www.theregister.com/ai-and-ml/2026/06/25/the-cpus-growing-role-in-agentic-ai-infrastructure/5261720">The Register</a></p>
-<hr />
-<p><strong>Anthropic / Alibaba — Extraction illicite des capacités du modèle Claude</strong>
-Anthropic accuse Alibaba d'avoir extrait de manière illégitime les capacités de son modèle Claude, soulevant des enjeux majeurs de propriété intellectuelle sur les LLM.
-<em>Impact : tout partenariat ou contrat de service IA en pharma doit inclure des clauses explicites sur l'interdiction de distillation/extraction de modèles — risque légal et réglementaire direct.</em>
-<a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/">Reuters via Hacker News</a></p>
-<hr />
-<p><strong>AI dans les diagnostics médicaux — Vulnérabilité d'inférence sur les données d'entraînement</strong>
-Des chercheurs démontrent que des IA de diagnostic médical peuvent être manipulées pour révéler quelles données patients ont servi à leur entraînement.
-<em>Impact : fort enjeu RGPD/HIPAA pour tout modèle IA entraîné sur des données patients en R&amp;D pharma ; nécessite d'évaluer les techniques de privacy-preserving ML (differential privacy, federated learning).</em>
-<a href="https://www.theregister.com/ai-and-ml/2026/06/24/medical-diagnosis-ais-can-be-tricked-into-telling-whose-data-trained-them/5261501">The Register</a></p>
-<hr />
-<p><strong>Companies leaping into AI sans gouvernance — Étude The Register</strong>
-Une étude pointe que la majorité des entreprises déploient de l'IA sans cadre de gouvernance ni évaluation des risques préalable.
-<em>Impact : en contexte pharma (GxP, validation CSV/GAMP5), un déploiement IA non gouverné constitue un risque réglementaire direct ; renforce la nécessité d'un AI Governance Framework formalisé.</em>
-<a href="https://www.theregister.com/devops/2026/06/24/companies-are-not-looking-before-theyre-leaping-into-the-ai-playpen/5261819">The Register</a></p>
-<hr />
-<p><strong>Microsoft utilise l'IA pour relier deux opérations malware dans une action en justice</strong>
-Microsoft a exploité des analyses IA pour établir des liens entre deux réseaux cybercriminels, dans le cadre d'une procédure RICO.
-<em>Impact : illustre la maturité de l'IA appliquée à la threat intelligence ; leçon applicable aux équipes SOC pharma pour corréler des incidents apparemment distincts.</em>
-<a href="https://www.theregister.com/security/2026/06/24/microsoft-uses-ai-to-link-two-malware-operations-in-racketeering-suit/5261656">The Register</a></p>
+<p><strong>OpenAI dévoile son premier chip custom (Broadcom)</strong>
+OpenAI lance sa propre puce d'inférence conçue avec Broadcom, réduisant sa dépendance à Nvidia et visant une baisse significative des coûts de déploiement.
+<em>Impact : accélère la commoditisation de l'inférence LLM et rend plus réaliste le déploiement on-premise ou en cloud souverain pour des usages pharma réglementés.</em>
+→ https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/</p>
+<p><strong>Gemini 3.5 Flash — Computer Use disponible</strong>
+Google active la fonctionnalité "computer use" sur Gemini 3.5 Flash, permettant à un agent IA de piloter une interface graphique de façon autonome.
+<em>Impact : potentiel direct pour l'automatisation de tâches répétitives sur des systèmes legacy pharma (LIMS, ERP, outils de soumission réglementaire) sans refactoring.</em>
+→ https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</p>
+<p><strong>Les entreprises se lancent dans l'IA sans filet</strong>
+Une étude pointe que la majorité des entreprises déploient des agents IA sans gouvernance, tests de sécurité ni évaluation des risques préalables.
+<em>Impact : signal d'alarme fort pour un contexte GxP ; rappelle l'obligation de validation (CSV/CSA) et la nécessité d'un cadre de gouvernance IA formalisé avant tout déploiement en environnement réglementé.</em>
+→ https://www.theregister.com/devops/2026/06/24/companies-are-not-looking-before-theyre-leaping-into-the-ai-playpen/</p>
+<p><strong>Alibaba accusé d'extraction illicite de capacités du modèle Claude (Anthropic)</strong>
+Anthropic allègue qu'Alibaba a extrait illicitement des capacités de son modèle Claude via des techniques de distillation non autorisées.
+<em>Impact : soulève des questions critiques de propriété intellectuelle et de sécurité des modèles IA utilisés en pharma ; vigilance accrue sur les contrats d'usage et les API exposées.</em>
+→ https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/</p>
+<p><strong>Coût des agents IA coding — Bientôt supérieur au développeur humain</strong>
+Des analyses montrent que le coût opérationnel des agents de codage IA pourrait dépasser celui des développeurs pour des tâches complexes, en raison de la consommation de tokens et d'itérations.
+<em>Impact : invite à une analyse coût-bénéfice rigoureuse avant de généraliser ces outils aux équipes IT pharma, notamment pour la validation logicielle et la maintenance de systèmes GxP.</em>
+→ https://www.theregister.com/ai-and-ml/2026/06/24/ai-coding-agents-could-soon-cost-more-than-the-developers-using-them/</p>
+<p><strong>ICON nomme Microsoft comme partenaire technologique</strong>
+Le CRO ICON formalise un partenariat technologique stratégique avec Microsoft, renforçant l'intégration Azure/AI dans ses opérations d'essais cliniques.
+<em>Impact : signal de consolidation cloud dans le secteur CRO ; pertinent pour tout sponsor pharma travaillant avec ICON, en termes d'interopérabilité des données et de conformité.</em>
+→ https://www.fiercebiotech.com/cro/icon-names-microsoft-tech-partner-q1-results-grow-analyst-confidence</p>
 <hr />
 <h2>💊 Pharma / Santé</h2>
-<p><strong>FDA approuve Trodelvy (Gilead) en 1ère ligne dans le cancer du sein triple négatif</strong>
-Approbation large de sacituzumab govitecan en front-line TNBC, intensifiant la guerre commerciale sur les ADC ciblant TROP2.
-<em>Impact : signal fort sur la dynamique ADC — les équipes business intelligence et R&amp;D doivent mettre à jour les analyses de marché et de pipeline concurrentiel dans l'espace oncologie.</em>
-<a href="https://endpoints.news/fda-backs-gileads-trodelvy-for-first-line-triple-negative-breast-cancer/">Endpoints News</a> | <a href="https://www.fiercepharma.com/pharma/gilead-trodelvy-nabs-broad-fda-approval-front-line-tnbc-fueling-trop2-adc-market-war">Fierce Pharma</a></p>
+<p><strong>Trodelvy (Gilead) — Approbation FDA en première ligne TNBC</strong>
+La FDA approuve Trodelvy (sacituzumab govitecan) en traitement de première ligne du cancer du sein triple-négatif, élargissant considérablement son marché et intensifiant la compétition ADC TROP2.
+<em>Impact : validation majeure de la plateforme ADC ; à surveiller pour tout programme interne ou partenarial ciblant TROP2 ou le segment oncologie.</em>
+→ https://endpoints.news/fda-backs-gileads-trodelvy-for-first-line-triple-negative-breast-cancer/</p>
+<p><strong>FDA — Rebuild de confiance par les dirigeants par intérim</strong>
+Les directeurs par intérim de la FDA annoncent des mesures pour reconstruire les effectifs et restaurer la confiance de l'industrie après une période d'instabilité institutionnelle.
+<em>Impact : les timelines de soumission et d'approbation pourraient se stabiliser ; à intégrer dans la planification des dépôts réglementaires H2 2026.</em>
+→ https://endpoints.news/acting-fda-leaders-look-to-rebuild-staff-industry-trust-after-tumult/</p>
+<p><strong>Eli Lilly investit dans Absci (IA) pour les traitements contre la chute de cheveux</strong>
+Lilly s'associe à la startup Absci, spécialiste du drug design par IA, pour développer de nouveaux traitements contre l'alopécie, illustrant l'expansion de l'IA générative vers de nouvelles indications.
+<em>Impact : modèle de collaboration Lilly-Chai/Absci à étudier comme benchmark pour des partenariats IA en découverte de médicaments.</em>
+→ https://www.statnews.com/2026/06/24/eli-lilly-absci-hair-loss-treatments/</p>
+<p><strong>Deviation investigation en pharma — Toujours deux semaines à l'ère de l'IA</strong>
+Analyse des freins organisationnels et systémiques qui maintiennent les délais d'investigation des déviations GxP à deux semaines malgré les outils IA disponibles.
+<em>Impact : piste d'optimisation concrète pour les équipes qualité ; identifie les goulots d'étranglement (documentation, escalade, systèmes déconnectés) que l'IA seule ne résout pas.</em>
+→ https://www.fiercepharma.com/sponsored/why-deviation-investigation-still-takes-two-weeks-age-age-ai</p>
+<p><strong>Eli Lilly &amp; Novo Nordisk leaders en citation IA dans les médias</strong>
+Un rapport positionne Lilly et Novo Nordisk comme les entreprises pharma les plus citées en lien avec l'IA, devant toute la concurrence, tout en questionnant l'efficacité des dépenses DTC.
+<em>Impact : indicateur de positionnement sectoriel ; utile pour calibrer la communication externe et les priorités IA de l'entreprise face aux leaders.</em>
+→ https://www.fiercepharma.com/marketing/eli-lilly-novo-nordisk-top-ai-citation-share-new-report-questions-dtc-spend-culture</p>
+<p><strong>Real-world data comme moteur de la biopharma nouvelle génération</strong>
+Retour d'expérience sur l'intégration des données en vie réelle (RWD) dans les processus de développement et de soumission réglementaire biopharma.
+<em>Impact : pertinent pour les équipes data/affaires réglementaires ; les RWD sont de plus en plus acceptées par FDA/EMA dans les dossiers de soumission accélérée.</em>
+→ https://www.fiercepharma.com/sponsored/real-world-data-powers-next-gen-biopharma</p>
 <hr />
-<p><strong>FDA en reconstruction — Les directeurs par intérim cherchent à restaurer la confiance</strong>
-Les responsables FDA par intérim annoncent des mesures pour reconstruire les effectifs et la relation avec l'industrie après une période de turbulences.
-<em>Impact : incertitude réglementaire persistante aux US ; les équipes affaires réglementaires doivent anticiper des délais de review potentiellement variables et maintenir un dialogue proactif avec l'agence.</em>
-<a href="https://endpoints.news/acting-fda-leaders-look-to-rebuild-staff-industry-trust-after-tumult/">Endpoints News</a></p>
-<hr />
-<p><strong>Eli Lilly + Absci — Investissement dans une startup IA pour le traitement de la perte de cheveux</strong>
-Lilly investit dans Absci, startup spécialisée en drug design par IA, pour développer de nouveaux traitements de l'alopécie.
-<em>Impact : confirme la tendance de l'IA generative appliquée à la conception de protéines thérapeutiques ; pertinent pour benchmarker les stratégies d'innovation computationnelle en interne.</em>
-<a href="https://www.statnews.com/2026/06/24/eli-lilly-absci-hair-loss-treatments/">STAT News</a></p>
-<hr />
-<p><strong>Déviation investigation toujours à 2 semaines malgré l'IA — Analyse Fierce Pharma</strong>
-Un article sponsorisé mais factuel pointe que les processus GxP d'investigation des déviations n'ont pas encore bénéficié concrètement des promesses de l'IA.
-<em>Impact : enjeu direct pour les opérations pharmaceutiques ; identifie un gap entre les outils IA disponibles et leur intégration réelle dans les workflows de qualité — piste d'amélioration prioritaire.</em>
-<a href="https://www.fiercepharma.com/sponsored/why-deviation-investigation-still-takes-two-weeks-age-ai">Fierce Pharma</a></p>
-<hr />
-<p><strong>Eli Lilly &amp; Novo Nordisk — Leaders de la citation IA, questionnement sur le DTC</strong>
-Un rapport place Lilly et Novo Nordisk en tête des citations dans les outils IA grand public, remettant en question l'efficacité des dépenses DTC traditionnelles.
-<em>Impact : signal de transformation du marketing pharma ; les stratégies de visibilité devront intégrer l'optimisation pour les moteurs de réponse IA (AI answer engine optimization).</em>
-<a href="https://www.fiercepharma.com/marketing/eli-lilly-novo-nordisk-top-ai-citation-share-new-report-questions-dtc-spend-culture">Fierce Pharma</a></p>
-<hr />
-<p><strong>RegenxBio — La FDA reconsidère la thérapie génique pour la maladie de Duchenne</strong>
-Nouveau revirement FDA sur une thérapie génique pour maladie rare, illustrant l'instabilité du cadre réglementaire dans ce domaine.
-<em>Impact : les équipes impliquées dans des programmes de thérapie génique ou avancée doivent intégrer un scénario de refus tardif dans leur gestion des risques réglementaires et financiers.</em>
-<a href="https://www.fiercebiotech.com/biotech/another-reversal-rare-disease-fda-reconsider-regenxbio-gene-therapy">Fierce Biotech</a></p>
-<hr />
-<h2>🔭 À surveiller</h2>
+<h2>👁️ À surveiller</h2>
 <ol>
 <li>
-<p><strong>Escalade des vulnérabilités Cisco</strong> : après le SD-WAN zero-day et plusieurs autres CVE critiques sur la semaine, surveiller si d'autres équipements Cisco présents dans l'infrastructure réseau/OT pharma sont concernés — une vague de patches coordonnée semble imminente.</p>
+<p><strong>Escalade des vulnérabilités Cisco</strong> — Avec un zero-day SD-WAN exploité avant divulgation et d'autres CVE Cisco en cours, le risque sur les infrastructures réseau pharma (IT/OT) est immédiat ; suivre les bulletins Cisco PSIRT et les indicateurs Mandiant dans les 48h.</p>
 </li>
 <li>
-<p><strong>Gouvernance IA &amp; conformité GxP</strong> : la convergence entre le déploiement non gouverné de l'IA en entreprise, les failles de supply chain sur les agents IA (OpenClaw), et les risques de fuite de données d'entraînement médicales crée un risque systémique — une mise à jour du cadre de validation GAMP5/CSV appliqué à l'IA devient urgente.</p>
+<p><strong>Gouvernance IA en contexte réglementé</strong> — La convergence entre le déploiement précipité d'agents IA en entreprise, les risques supply chain (OpenClaw, CI/CD), et les exigences GxP crée une zone de friction réglementaire non encore adressée par FDA/EMA ; anticiper des guidance spécifiques d'ici fin 2026.</p>
 </li>
 <li>
-<p><strong>Instabilité réglementaire FDA</strong> : entre la reconstruction des équipes FDA, les revirements sur les thérapies géniques (RegenxBio), et le débat MFN sur les prix, le contexte réglementaire US est en mutation rapide — à suivre de près pour tout dossier en cours de soumission ou en phase de pre-NDA.</p>
+<p><strong>Stabilisation FDA et impact sur les timelines</strong> — La reconstruction des équipes FDA après la période de turbulences est à suivre de près : toute accélération ou réorganisation interne pourrait modifier les fenêtres d'approbation pour les programmes en cours de soumission.</p>
 </li>
 </ol>
 <hr />
@@ -157,6 +145,8 @@ Nouveau revirement FDA sur une thérapie génique pour maladie rare, illustrant 
 <li><strong>[priorité]</strong> <a href="https://www.theregister.com/ai-and-ml/2026/06/24/ai-coding-agents-could-soon-cost-more-than-the-developers-using-them/5260864">AI coding agents could soon cost more than the developers using them</a> — The Register</li>
 <li><strong>[priorité]</strong> <a href="https://www.theregister.com/saas/2026/06/24/microsoft-rivals-line-up-to-tell-uk-watchdog-where-the-software-behemoth-hurt-them/5260875">Microsoft rivals line up to tell UK watchdog where the software behemoth hurt them</a> — The Register</li>
 <li><strong>[priorité]</strong> <a href="https://www.theregister.com/ai-and-ml/2026/06/24/database-vendors-pitch-themselves-as-the-cure-for-runaway-ai-costs/5260126">Database vendors pitch themselves as the cure for runaway AI costs</a> — The Register</li>
+<li><a href="https://www.theregister.com/science/2026/06/25/salyut-5-at-50-the-soviet-space-station-that-sickened-one-crew-and-nearly-drowned-another/5261425">Salyut 5 at 50: The Soviet space station that sickened one crew and nearly drowned another</a> — The Register</li>
+<li><a href="https://www.mfw.org.au/">Mad Fucking Witches</a> — Hacker News</li>
 <li><a href="https://utaw.tech/news/wikipedia-recognition">Wikipedia Workers in Britain set global first by seeking union recognition</a> — Hacker News</li>
 <li><a href="https://www.theregister.com/security/2026/06/25/uk-schools-network-left-wide-open-for-invasion-student-found/5261567">UK school’s network left wide open for invasion, student found</a> — The Register</li>
 <li><a href="https://hl2.slqnt.dev/">Half-Life 2 in a Browser</a> — Hacker News</li>
@@ -181,11 +171,9 @@ Nouveau revirement FDA sur une thérapie génique pour maladie rare, illustrant 
 <li><a href="https://www.greptile.com/blog/prs-on-openclaw">PR spam today looks like email spam in the early 2000s</a> — Hacker News</li>
 <li><a href="https://www.theregister.com/public-sector/2026/06/24/british-home-office-seeks-techie-to-herd-nearly-1000-engineers-looking-after-600-systems/5261436">British Home Office seeks techie to herd nearly 1,000 engineers looking after 600 systems</a> — The Register</li>
 <li><a href="https://github.com/nubjs/nub">Show HN: Nub – A Bun-like all-in-one toolkit for Node.js</a> — Hacker News</li>
-<li><a href="https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/">Qualcomm to Acquire Modular</a> — Hacker News</li>
 <li><a href="https://www.theregister.com/personal-tech/2026/06/24/uk-government-wants-trusted-news-sources-promoted-above-the-social-media-noise/5261359">UK government wants 'trusted' news sources promoted above the social media noise</a> — The Register</li>
 <li><a href="https://www.theregister.com/security/2026/06/24/london-cops-bring-live-facial-recognition-to-west-end/5261031">London cops bring live facial recognition to West End</a> — The Register</li>
 <li><a href="https://www.theregister.com/os-platforms/2026/06/24/alpine-linux-324-scales-new-desktop-heights-with-cosmic/5259985">Alpine Linux 3.24 scales new desktop heights with COSMIC</a> — The Register</li>
-<li><a href="https://www.theregister.com/offbeat/2026/06/24/ordering-a-trip-back-to-2009-with-a-side-of-nostalgia/5259669">Ordering a trip back to 2009, with a side of nostalgia</a> — The Register</li>
 </ul>
 <h3>Pharma / Santé</h3>
 <ul>
@@ -200,7 +188,6 @@ Nouveau revirement FDA sur une thérapie génique pour maladie rare, illustrant 
 <li><strong>[priorité]</strong> <a href="https://www.statnews.com/pharmalot/2026/06/24/fda-commissioner-candidate-germany-plans-for-drug-prices/?utm_campaign=rss">STAT+: Pharmalittle: We’re reading about an FDA commissioner candidate, Germany’s plans for drug prices, and more</a> — STAT News</li>
 <li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/24/regenxbio-duchenne-gene-therapy-fda-submission/?utm_campaign=rss">STAT+: Wagering on FDA changes, Regenxbio will submit Duchenne gene therapy for approval</a> — STAT News</li>
 <li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/24/health-news-fda-finally-analyzed-its-own-youth-tobacco-data/?utm_campaign=rss">FDA finally analyzed its own youth tobacco data</a> — STAT News</li>
-<li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/24/fda-breakthrough-devices-what-we-learned-livanova-vitaria-results/?utm_campaign=rss">STAT+: What an abandoned heart failure trial says about ‘breakthrough’ devices that don’t reach patients</a> — STAT News</li>
 <li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/pharma/gilead-trodelvy-nabs-broad-fda-approval-front-line-tnbc-fueling-trop2-adc-market-war"><a href="https://www.fiercepharma.com/pharma/gilead-trodelvy-nabs-broad-fda-approval-front-line-tnbc-fueling-trop2-adc-market-war" hreflang="en">Gilead’s Trodelvy nabs broad FDA approval in front-line TNBC, fueling TROP2 ADC market war</a></a> — Fierce Pharma</li>
 <li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/marketing/eli-lilly-novo-nordisk-top-ai-citation-share-new-report-questions-dtc-spend-culture"><a href="https://www.fiercepharma.com/marketing/eli-lilly-novo-nordisk-top-ai-citation-share-new-report-questions-dtc-spend-culture" hreflang="en">Eli Lilly, Novo Nordisk top AI citation share as new report questions DTC spend culture</a></a> — Fierce Pharma</li>
 <li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/sponsored/why-deviation-investigation-still-takes-two-weeks-age-ai"><a href="https://www.fiercepharma.com/sponsored/why-deviation-investigation-still-takes-two-weeks-age-ai" hreflang="en">Why a deviation investigation still takes two weeks in the age of AI</a></a> — Fierce Pharma</li>
@@ -210,6 +197,11 @@ Nouveau revirement FDA sur une thérapie génique pour maladie rare, illustrant 
 <li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/medtech/fda-issues-early-alert-jjs-abiomed-catheter-introducer-amid-bleeding-risk"><a href="https://www.fiercebiotech.com/medtech/fda-issues-early-alert-jjs-abiomed-catheter-introducer-amid-bleeding-risk" hreflang="en">FDA issues early alert for J&amp;J’s Abiomed catheter introducer over manufacturing issues, bleeding risk </a></a> — Fierce Biotech</li>
 <li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/biotech/exelixis-cabometyx-successor-fails-primary-endpoint-colorectal-cancer-trial-amid-fda-review"><a href="https://www.fiercebiotech.com/biotech/exelixis-cabometyx-successor-fails-primary-endpoint-colorectal-cancer-trial-amid-fda-review" hreflang="en">Exelixis’ Cabometyx successor fails primary endpoint in colorectal cancer trial amid FDA review</a></a> — Fierce Biotech</li>
 <li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/biotech/another-reversal-rare-disease-fda-reconsider-regenxbio-gene-therapy"><a href="https://www.fiercebiotech.com/biotech/another-reversal-rare-disease-fda-reconsider-regenxbio-gene-therapy" hreflang="en">In another reversal for rare disease field, FDA to reconsider Regenxbio gene therapy</a></a> — Fierce Biotech</li>
+<li><a href="https://www.statnews.com/2026/06/25/vaccine-industry-dark-period-causes-for-hope/?utm_campaign=rss">STAT+: Facing a brutal run, battered vaccine makers still see cause for hope</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/25/prenatal-down-syndrome-diagnosis-screening-life-expectancy-health-facts/?utm_campaign=rss">Opinion: My adult daughter has Down syndrome. Her life is entirely different from what experts expected</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/25/bipartisan-bill-methadone-prescription-pharmacy-pickup/?utm_campaign=rss">Bipartisan bill seeks to allow direct prescribing of methadone for opioid addiction</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/25/china-biotech-next-steps-after-biosecure-act/?utm_campaign=rss">STAT+: Biosecure didn’t stop China’s rise in biotech. Some lawmakers want to do more</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/25/tarasoff-50th-anniversary-murder-doctor-patient-confidentiality/?utm_campaign=rss">Opinion: How a 1976 murder case changed doctor-patient confidentiality</a> — STAT News</li>
 <li><a href="https://endpoints.news/how-gsks-new-ceo-lined-up-a-major-buyout-to-start-his-time-at-the-top/">How GSK's new CEO lined up a major buyout to start his time at the top</a> — Endpoints News</li>
 <li><a href="https://endpoints.news/remix-does-reverse-merger-with-passage-bio-for-mrna-degrader/">Remix does reverse merger with Passage Bio for mRNA degrader</a> — Endpoints News</li>
 <li><a href="https://www.statnews.com/2026/06/24/health-care-spending-up-7-point-3-percent-6-trillion-dollars-2026/?utm_campaign=rss">STAT+: U.S. health spending rose sharply in 2025, thanks to GLP-1 use and more care</a> — STAT News</li>
@@ -224,8 +216,6 @@ Nouveau revirement FDA sur une thérapie génique pour maladie rare, illustrant 
 <li><a href="https://www.statnews.com/2026/06/24/ophthalmology-biotech-ollin-biosciences/?utm_campaign=rss">STAT+: Ophthalmology venture grabs investors’ attention, raises $330 million</a> — STAT News</li>
 <li><a href="https://endpoints.news/rq-bio-secures-115m-series-a-for-virus-targeting-antibody-pipeline/">RQ Bio secures $115M Series A for virus-targeting antibody pipeline</a> — Endpoints News</li>
 <li><a href="https://endpoints.news/lilly-offers-up-to-1-9b-in-new-drug-discovery-deal-with-abbisko/">Lilly offers up to $1.9B in new drug discovery deal with Abbisko</a> — Endpoints News</li>
-<li><a href="https://www.statnews.com/2026/06/24/short-walking-breaks-sitting-health-research/?utm_campaign=rss">Opinion: How I used public radio to recruit 20,000 participants for a peer-reviewed study on walking breaks</a> — STAT News</li>
-<li><a href="https://www.statnews.com/2026/06/24/embryo-editing-dieter-egli-ethical-boundaries-moratorium/?utm_campaign=rss">Opinion: New human embryo editing advances require tough conversations on ethical boundaries</a> — STAT News</li>
 <li><a href="https://www.fiercepharma.com/biotech/mapp-gilead-antivirals-be-deployed-drc-ebola-trial-who-chief"><a href="https://www.fiercepharma.com/biotech/mapp-gilead-antivirals-be-deployed-drc-ebola-trial-who-chief" hreflang="en">Mapp, Gilead antivirals to be deployed in DRC Ebola trial: WHO chief</a></a> — Fierce Pharma</li>
 <li><a href="https://www.fiercepharma.com/pharma/pfizer-scores-its-first-expansion-7-years-breast-cancer-blockbuster-ibrance"><a href="https://www.fiercepharma.com/pharma/pfizer-scores-its-first-expansion-7-years-breast-cancer-blockbuster-ibrance" hreflang="en">Pfizer scores 1st expansion in 7 years for breast cancer blockbuster Ibrance</a></a> — Fierce Pharma</li>
 <li><a href="https://www.fiercepharma.com/pharma/stada-under-new-capvest-ownership-picks-horde-european-consumer-health-brands-orifarm"><a href="https://www.fiercepharma.com/pharma/stada-under-new-capvest-ownership-picks-horde-european-consumer-health-brands-orifarm" hreflang="en">Stada, under new CapVest ownership, picks up horde of European consumer brands</a></a> — Fierce Pharma</li>
