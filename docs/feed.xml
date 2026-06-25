@@ -5,7 +5,7 @@
     <link>https://attila-krb.github.io/veille-tech</link>
     <description>Digest quotidien de veille technologique, genere automatiquement.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 25 Jun 2026 07:43:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 08:06:00 +0000</lastBuildDate>
     <atom:link href="https://attila-krb.github.io/veille-tech/feed.xml" rel="self" type="application/rss+xml" />
         <item>
       <title>Veille tech — 2026-06-25</title>
@@ -14,90 +14,76 @@
       <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[<h1>Veille tech — 2026-06-25</h1>
 <p>Fenetre : 24 h · 141 items collectes</p>
-<h2>🔐 Cyber</h2>
-<p><strong>Cisco Catalyst SD-WAN — Zero-Day CVE-2026-20245 activement exploité</strong>
-Faille critique permettant l'obtention d'un accès root sur les équipements SD-WAN Cisco, exploitée deux mois avant sa divulgation publique selon Mandiant.
-Impact : Si des équipements Cisco SD-WAN sont utilisés pour la segmentation réseau OT/IT ou la connectivité inter-sites (sites de production, labos), patching d'urgence requis et audit des accès root à initier immédiatement.
+<h2>🔐 CYBER</h2>
+<p><strong>[CRITIQUE] Zero-day Cisco Catalyst SD-WAN (CVE-2026-20245) — exploitation active</strong>
+Vulnérabilité permettant l'obtention d'un accès root, exploitée 2 mois avant divulgation publique selon Mandiant. Impact direct si SD-WAN Cisco déployé dans l'infrastructure réseau du groupe — patch et audit d'accès prioritaires.
 🔗 https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html</p>
-<p><strong>Extension Edge malveillante via Native Messaging — vecteur de malware furtif</strong>
-Une extension Microsoft Edge détournée utilise le mécanisme Native Messaging pour servir de pont vers des malwares installés sur le poste, contournant les contrôles réseau classiques.
-Impact : Risque direct sur les postes utilisateurs pharmaceutiques (accès aux ERP, LIMS, systèmes réglementaires) ; renforcer la politique de gestion des extensions de navigateur et les contrôles EDR.
+<p><strong>[CRITIQUE] Extension Edge malveillante via Native Messaging — nouveau vecteur de compromission</strong>
+Une extension Microsoft Edge abuse du protocole Native Messaging pour servir de pont vers des malwares sans détection EDR classique. Risque élevé sur les postes de travail pharmaceutiques où Edge est souvent le navigateur standard déployé.
 🔗 https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/</p>
-<p><strong>OpenClaw — nouvelles skills malveillantes dans la chaîne d'approvisionnement IA</strong>
-De nouvelles extensions malveillantes détectées sur ClaWHub, le registre de skills pour agents IA OpenClaw, menacent l'intégrité des pipelines IA/ML.
-Impact : Pour tout projet d'IA agentique en pharma (drug discovery, automatisation réglementaire), la vérification de provenance des composants tiers IA devient un prérequis de sécurité critique, au même titre que la validation logicielle GxP.
-🔗 https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain</p>
-<p><strong>Opération Endgame — Amadey &amp; StealC démantelés, 27 M de credentials récupérés</strong>
-Une opération internationale coordonnée a neutralisé les infrastructures des malwares voleurs de credentials Amadey et StealC.
-Impact : Vérifier si des credentials d'entreprise figurent dans les 27 millions d'identifiants récupérés ; opportunité de forcer une rotation de mots de passe ciblée pour les comptes à risque.
-🔗 https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html</p>
-<p><strong>macOS — faille permettant aux utilisateurs de désactiver les outils de sécurité</strong>
-Apple a introduit une lacune dans macOS permettant à un utilisateur standard de désactiver les solutions de sécurité endpoint (EDR, antivirus).
-Impact : Risque élevé pour les environnements pharma utilisant des MacBook (équipes R&amp;D, affaires médicales) ; escalade à traiter avec les équipes SOC/endpoint management en attendant un patch Apple.
+<p><strong>[ÉLEVÉ] macOS — faille permettant à l'utilisateur de désactiver les outils de sécurité</strong>
+Apple a laissé un contournement permettant aux utilisateurs macOS de neutraliser les solutions de sécurité endpoint. Pertinent pour les équipes R&amp;D et bioinformatique qui utilisent souvent des Mac hors périmètre de contrôle standard.
 🔗 https://www.darkreading.com/application-security/apple-macos-security-gap-users-disable-security-tools</p>
-<p><strong>Cordyceps — failles CI/CD exposant 300+ dépôts GitHub à des attaques supply chain</strong>
-Des vulnérabilités dans des pipelines CI/CD exposent plus de 300 repositories GitHub à des injections malveillantes via la chaîne de build.
-Impact : Tout pipeline DevOps pharma (développement de logiciels validés, outils de soumission réglementaire, scripts de traitement de données cliniques) doit faire l'objet d'un audit des configurations CI/CD et des droits d'accès aux secrets.
+<p><strong>[ÉLEVÉ] Supply chain IA — nouvelles skills malveillantes sur ClawHub (OpenClaw)</strong>
+Des packages malveillants ciblant les pipelines d'agents IA ont été découverts sur ClawHub, l'équivalent PyPI pour l'écosystème OpenClaw. Signal fort pour les équipes qui déploient des agents IA en R&amp;D ou en automatisation de processus.
+🔗 https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain</p>
+<p><strong>[MODÉRÉ] Opération Endgame — démantèlement des réseaux Amadey &amp; StealC, 27M credentials récupérés</strong>
+Une opération coordonnée internationale a neutralisé deux des principaux infostealer-as-a-service du marché. Vérifier si des credentials du groupe figurent dans les 27M identifiants récupérés — opportunity de threat intelligence actionnable.
+🔗 https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html</p>
+<p><strong>[MODÉRÉ] CI/CD — failles Cordyceps exposent 300+ dépôts GitHub à des attaques supply chain</strong>
+Des vulnérabilités dans des pipelines CI/CD affectent plus de 300 repositories GitHub, permettant l'injection de code malveillant. Critique pour les équipes DevOps pharma gérant des outils de validation, d'analyse de données ou de bioinformatique sous contrôle de version.
 🔗 https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html</p>
 <hr />
-<h2>💻 IT / Tech</h2>
-<p><strong>L'IA agentique à la croisée des chemins — "Apex Agentic Adversary" et "Loop Engineering"</strong>
-Les agents IA autonomes constituent désormais un vecteur d'attaque émergent ET un nouveau paradigme de développement nécessitant toujours une supervision humaine explicite.
-Impact : Pour les projets d'IA en pharma (automatisation réglementaire, pharmacovigilance, QA), le principe de "human-in-the-loop" n'est pas qu'une bonne pratique — il devient un impératif de sécurité et de conformité.
-🔗 https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html / https://www.theregister.com/ai-and-ml/2026/06/24/loop-engineering-latest-ai-buzzword-still-needs-humans-in-the-loop/</p>
-<p><strong>Les entreprises adoptent l'IA sans filet — rapport sur les déploiements non maîtrisés</strong>
-Une étude pointe des déploiements IA en production réalisés sans gouvernance, sans évaluation de risque, ni contrôle de qualité des outputs.
-Impact : En contexte GxP, un déploiement non contrôlé d'IA constitue un risque de conformité immédiat (validation logicielle 21 CFR Part 11 / Annexe 11) ; nécessite une politique interne claire avant tout passage en production.
-🔗 https://www.theregister.com/devops/2026/06/24/companies-are-not-looking-before-theyre-leaping-into-the-ai-playpen/</p>
-<p><strong>OpenAI lance son premier chip custom (Broadcom) — Gemini 3.5 Flash intègre le "computer use"</strong>
-OpenAI dévoile une puce IA propriétaire fabriquée par Broadcom, tandis que Google active la capacité "computer use" (contrôle autonome d'interfaces) dans Gemini 3.5 Flash.
-Impact : L'accélération matérielle IA réduit les coûts d'inférence à terme ; le "computer use" ouvre des cas d'usage d'automatisation de tâches répétitives (data entry, extraction documentaire réglementaire) mais requiert un cadre de validation rigoureux.
-🔗 https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/ / https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</p>
-<p><strong>Anthropic accuse Alibaba d'extraction illicite de capacités du modèle Claude</strong>
-Anthropic allègue qu'Alibaba a contourné ses conditions d'utilisation pour extraire les capacités de Claude et les répliquer dans ses propres modèles.
-Impact : Soulève des questions critiques de propriété intellectuelle et de sécurité des modèles IA utilisés en pharma — les contrats avec les fournisseurs LLM doivent inclure des clauses explicites sur l'usage des données et outputs.
+<h2>💻 IT / TECH</h2>
+<p><strong>[STRATÉGIQUE] Les agents IA autonomes ("Apex Agentic Adversary") redéfinissent le paysage des menaces</strong>
+Les adversaires commencent à déployer des agents IA capables de s'adapter et de chaîner des attaques sans intervention humaine. Implique une révision des modèles de détection et de réponse aux incidents, y compris pour les environnements OT/SCADA pharma.
+🔗 https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary/</p>
+<p><strong>[STRATÉGIQUE] Les entreprises sautent dans l'IA sans filet de sécurité — analyse The Register</strong>
+Une étude souligne que la majorité des déploiements IA en entreprise ignorent les étapes de gouvernance, de validation et de gestion des risques. Résonance directe avec les exigences GxP (validation CSV/CSA) et les attentes FDA/EMA sur les systèmes IA en contexte réglementé.
+🔗 https://www.theregister.com/devops/2026/06/24/companies-are-not-looking-before-theyre-leaping-into-the-ai-playpen/5261819</p>
+<p><strong>[NOTABLE] OpenAI lance son premier chip custom (Broadcom) — impact sur les coûts d'inférence</strong>
+OpenAI dévoile une puce IA propriétaire co-développée avec Broadcom, visant à réduire la dépendance à Nvidia et les coûts d'inférence. À suivre pour les décisions d'architecture cloud IA du groupe (coûts de run des modèles LLM internes ou API).
+🔗 https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/</p>
+<p><strong>[NOTABLE] Gemini 3.5 Flash — Computer Use désormais disponible</strong>
+Google active la capacité "computer use" sur Gemini 3.5 Flash, permettant à un agent IA de piloter une interface graphique de manière autonome. Opportunité pour l'automatisation de processus pharma (remplissage de formulaires réglementaires, tests IHM), mais aussi nouveau vecteur de risque à évaluer.
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</p>
+<p><strong>[NOTABLE] Anthropic accuse Alibaba d'extraction illicite des capacités de Claude</strong>
+Anthropic allègue qu'Alibaba a reverse-engineered les comportements de Claude de façon non autorisée. Soulève des questions de propriété intellectuelle et de conformité pour les groupes pharma qui utilisent ou développent des modèles IA en partenariat avec des acteurs tiers.
 🔗 https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/</p>
-<p><strong>Les agents de code IA pourraient coûter plus cher que les développeurs</strong>
-Une analyse du Register montre que le coût des agents IA de développement (tokens, compute, supervision) pourrait dépasser celui d'un développeur humain sur des tâches complexes.
-Impact : Les projets de modernisation applicative en pharma doivent intégrer une analyse TCO réaliste des agents IA avant tout déploiement à l'échelle ; le "vibe coding" non supervisé reste inadapté aux environnements validés.
-🔗 https://www.theregister.com/ai-and-ml/2026/06/24/ai-coding-agents-could-soon-cost-more-than-the-developers-using-them/</p>
+<p><strong>[NOTABLE] Les agents IA de coding pourraient bientôt coûter plus cher que les développeurs</strong>
+Une analyse pointe que le coût réel des agents de développement IA (tokens, orchestration, supervision) dépasse dans certains cas le coût humain équivalent. Argument de poids pour les business cases de transformation digitale à présenter en comité d'investissement.
+🔗 https://www.theregister.com/ai-and-ml/2026/06/24/ai-coding-agents-could-soon-cost-more-than-the-developers-using-them/5260864</p>
 <hr />
-<h2>💊 Pharma / Santé</h2>
-<p><strong>Gilead — Trodelvy approuvé en première ligne dans le TNBC</strong>
-La FDA accorde une approbation large à Trodelvy (sacituzumab govitecan) en première ligne du cancer du sein triple négatif, intensifiant la guerre des ADC TROP2.
-Impact : Signal fort sur la dynamique du marché des ADC ; à surveiller pour les équipes de veille compétitive et pipeline, notamment face aux acteurs positionnés sur TROP2 (AstraZeneca/Daiichi).
+<h2>💊 PHARMA / SANTÉ</h2>
+<p><strong>[RÉGLEMENTAIRE] FDA approuve Trodelvy (Gilead) en première ligne TNBC — guerre ADC TROP2 lancée</strong>
+L'approbation broad-label de Trodelvy en cancer du sein triple-négatif première ligne intensifie la compétition sur le segment ADC TROP2. Signal fort sur l'évolution du marché oncologie, à intégrer dans les analyses compétitives et les revues de portefeuille.
 🔗 https://endpoints.news/fda-backs-gileads-trodelvy-for-first-line-triple-negative-breast-cancer/</p>
-<p><strong>Eli Lilly investit dans Absci — IA pour les traitements contre la chute de cheveux</strong>
-Lilly s'associe à la startup Absci, spécialisée en design de protéines par IA, pour développer de nouveaux traitements contre l'alopécie.
-Impact : Nouvelle illustration de la convergence IA/drug discovery chez les Big Pharma — le modèle de co-développement avec des startups IA devient un schéma standard à benchmarker en interne.
-🔗 https://www.statnews.com/2026/06/24/eli-lilly-absci-hair-loss-treatments/</p>
-<p><strong>FDA — Les acting leaders cherchent à restaurer la confiance après une période de turbulences</strong>
-Les dirigeants par intérim de la FDA affichent une volonté de stabilisation et de reconstruction des effectifs et de la relation avec l'industrie.
-Impact : Contexte réglementaire à surveiller étroitement : les délais de soumission et d'approbation pourraient se normaliser, mais l'incertitude sur la nomination d'un commissioner permanent maintient un risque de variabilité dans les interactions réglementaires.
+<p><strong>[RÉGLEMENTAIRE] FDA en reconstruction — les directeurs par intérim cherchent à restaurer la confiance</strong>
+Les leaders intérimaires de la FDA affichent une volonté de stabiliser les équipes et de rétablir la confiance avec l'industrie après une période de turbulences. Contexte déterminant pour anticiper les délais de soumission et les interactions réglementaires à venir.
 🔗 https://endpoints.news/acting-fda-leaders-look-to-rebuild-staff-industry-trust-after-tumult/</p>
-<p><strong>Pourquoi une investigation de déviation prend encore deux semaines à l'ère de l'IA</strong>
-Article sponsor (Fierce Pharma) qui pointe les verrous organisationnels et systémiques qui empêchent l'IA d'accélérer réellement les processus qualité en pharma.
-Impact : Éclairage concret sur les freins à l'automatisation QA (silos de données, systèmes legacy, culture de validation) — pertinent pour toute initiative d'IA appliquée aux processus GxP manufacturing.
+<p><strong>[STRATÉGIQUE] Eli Lilly x Absci — investissement IA pour la découverte de traitements contre la perte de cheveux</strong>
+Lilly s'appuie sur Absci, startup spécialisée en design de protéines par IA, pour explorer de nouvelles modalités thérapeutiques. Illustration de la convergence IA générative / drug discovery qui redéfinit les modèles de R&amp;D externalisée.
+🔗 https://www.statnews.com/2026/06/24/eli-lilly-absci-hair-loss-treatments/</p>
+<p><strong>[OPÉRATIONNEL] Enquête Fierce Pharma — les investigations de déviation prennent encore 2 semaines malgré l'IA</strong>
+Une analyse sponsorisée mais factuelle pointe que les workflows qualité (déviation, CAPA) restent manuels malgré les promesses de l'IA, faute d'intégration avec les systèmes QMS existants. Pertinent pour toute initiative de digitalisation qualité/GxP en cours ou planifiée.
 🔗 https://www.fiercepharma.com/sponsored/why-deviation-investigation-still-takes-two-weeks-age-ai</p>
-<p><strong>ICON nomme Microsoft comme partenaire technologique</strong>
-Le CRO ICON formalise un partenariat avec Microsoft, renforçant la confiance des analystes après de bons résultats Q1.
-Impact : Accélère la tendance à l'adoption cloud/IA dans les essais cliniques externalisés ; point de référence pour les négociations et benchmarks technologiques avec les CROs partenaires.
+<p><strong>[STRATÉGIQUE] Enquête CEO H1 2026 Endpoints — retombées MFN et recommandations FDA</strong>
+Le sondage semestriel des PDG pharma révèle les impacts de la clause Most-Favored-Nation sur les stratégies de pricing et les priorités réglementaires. Lecture utile pour aligner les décisions IT/digital sur les priorités business du secteur.
+🔗 https://endpoints.news/endpoints-h1-2026-ceo-survey-fallout-from-mfn-and-suggestions-for-the-fda/</p>
+<p><strong>[NOTABLE] ICON nomme Microsoft comme partenaire technologique — signal CRO x Cloud</strong>
+Le CRO ICON formalise un partenariat technologique avec Microsoft, renforcé par de bons résultats Q1. Indicateur de la consolidation cloud/IA dans l'espace CRO, à surveiller pour les choix de partenaires dans les essais cliniques externalisés.
 🔗 https://www.fiercebiotech.com/cro/icon-names-microsoft-tech-partner-q1-results-grow-analyst-confidence</p>
-<p><strong>IA et mort subite cardiaque — un modèle pour résoudre un mystère médical</strong>
-Un modèle IA développé pour prédire les causes de mort subite cardiaque montre des résultats prometteurs sur des données cliniques complexes.
-Impact : Démontre la capacité de l'IA à extraire de la valeur prédictive dans des domaines où les données structurées sont rares — cas d'usage transposable à la pharmacovigilance et à la détection de signaux de sécurité.
-🔗 https://www.statnews.com/2026/06/24/artificial-intelligence-model-cause-of-sudden-cardiac-death/</p>
 <hr />
-<h2>👁️ À surveiller</h2>
+<h2>👁️ À SURVEILLER</h2>
 <ol>
 <li>
-<p><strong>Exploitation active du zero-day Cisco SD-WAN (CVE-2026-20245)</strong> : avec un délai d'exploitation de 2 mois avant divulgation, vérifier en urgence l'exposition des infrastructures réseau du groupe et l'état de patching — criticité maximale pour tout site connecté via SD-WAN.</p>
+<p><strong>Exposition SD-WAN Cisco</strong> : Vérifier en urgence si CVE-2026-20245 concerne l'infrastructure réseau du groupe — l'exploitation précède la divulgation de 2 mois, ce qui suggère que des acteurs sophistiqués (potentiellement étatiques) sont impliqués.</p>
 </li>
 <li>
-<p><strong>Gouvernance de l'IA en contexte GxP</strong> : la convergence entre déploiements IA non maîtrisés (rapport "AI playpen"), agents IA comme vecteurs d'attaque ("Apex Agentic Adversary") et supply chain IA compromise (OpenClaw) impose de définir ou renforcer d'urgence un cadre de validation et de sécurité pour tout projet IA en environnement réglementé.</p>
+<p><strong>Gouvernance IA &amp; conformité GxP</strong> : La convergence des signaux (déploiements IA non contrôlés, computer use Gemini, agents autonomes, extraction illicite de modèles) appelle une mise à jour rapide du cadre de validation IA interne, en anticipation des futures guidance FDA/EMA sur l'IA en contexte réglementé.</p>
 </li>
 <li>
-<p><strong>Dynamique réglementaire FDA</strong> : l'instabilité institutionnelle (acting leadership, reconstruction des effectifs) combinée aux signaux contradictoires sur les approbations (Regenxbio reconsidéré, Trodelvy approuvé, Passage Bio recalé) crée un environnement imprévisible — un monitoring hebdomadaire des décisions FDA est recommandé pour anticiper les impacts sur les soumissions du groupe.</p>
+<p><strong>Supply chain logicielle IA (ClawHub + CI/CD Cordyceps)</strong> : La multiplication des vecteurs d'attaque ciblant spécifiquement les pipelines IA et DevOps constitue une tendance structurelle — un audit des dépendances tierces dans les environnements de développement pharma s'impose.</p>
 </li>
 </ol>
 <hr />
@@ -127,6 +113,7 @@ Impact : Démontre la capacité de l'IA à extraire de la valeur prédictive dan
 </ul>
 <h3>IT / Tech</h3>
 <ul>
+<li><strong>[priorité]</strong> <a href="https://www.theregister.com/ai-and-ml/2026/06/25/the-cpus-growing-role-in-agentic-ai-infrastructure/5261720">The CPU's growing role in agentic AI infrastructure</a> — The Register</li>
 <li><strong>[priorité]</strong> <a href="https://www.theregister.com/channel/2026/06/25/infosys-boss-says-vibe-coding-is-no-threat-because-theres-more-to-writing-software-than-writing-software/5261900">Infosys boss says vibe coding is no threat because there’s more to writing software than writing software</a> — The Register</li>
 <li><strong>[priorité]</strong> <a href="https://www.theregister.com/devops/2026/06/24/companies-are-not-looking-before-theyre-leaping-into-the-ai-playpen/5261819">Companies are not looking before they're leaping into the AI playpen</a> — The Register</li>
 <li><strong>[priorité]</strong> <a href="https://www.theregister.com/security/2026/06/24/the-hits-keep-on-coming-for-cisco-vulnerabilities/5261797">The hits keep on coming for Cisco vulnerabilities</a> — The Register</li>
@@ -169,7 +156,6 @@ Impact : Démontre la capacité de l'IA à extraire de la valeur prédictive dan
 <li><a href="https://www.theregister.com/security/2026/06/24/london-cops-bring-live-facial-recognition-to-west-end/5261031">London cops bring live facial recognition to West End</a> — The Register</li>
 <li><a href="https://www.theregister.com/os-platforms/2026/06/24/alpine-linux-324-scales-new-desktop-heights-with-cosmic/5259985">Alpine Linux 3.24 scales new desktop heights with COSMIC</a> — The Register</li>
 <li><a href="https://www.theregister.com/offbeat/2026/06/24/ordering-a-trip-back-to-2009-with-a-side-of-nostalgia/5259669">Ordering a trip back to 2009, with a side of nostalgia</a> — The Register</li>
-<li><a href="https://www.theregister.com/storage/2026/06/24/explainer-why-your-legacy-storage-is-choking-your-expensive-gpu/5260472">Explainer: Why your legacy storage is choking your expensive GPU</a> — The Register</li>
 </ul>
 <h3>Pharma / Santé</h3>
 <ul>
