@@ -10,6 +10,205 @@
 <body>
 <h1>Veille tech (cyber / IT / pharma)</h1>
 <p>Flux RSS : <a href="feed.xml">feed.xml</a></p>
+<section id="veille-2026-06-30">
+<h2>Veille tech — 2026-06-30</h2>
+<h1>Veille tech — 2026-06-30</h1>
+<p>Fenetre : 24 h · 119 items collectes</p>
+<h2>🔐 Cyber</h2>
+<p><strong>Oracle E-Business Suite – CVE-2026-46817 activement exploitée</strong>
+Faille critique dans Oracle EBS désormais exploitée in the wild, avec une brèche confirmée chez Nissan sur des données employés.
+<em>Impact : tout groupe pharma utilisant Oracle EBS (ERP, supply chain, finances) doit appliquer le patch en urgence – risque direct sur l'intégrité des données GxP et des systèmes réglementés.</em>
+🔗 https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html | https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/</p>
+<p><strong>Stealer 'Djinn' – ciblage des credentials cloud et IA</strong>
+Un nouveau malware exploite une faille critique dans SimpleHelp (outil de support à distance) pour dérober des identifiants cloud et IA.
+<em>Impact : les environnements pharma utilisant des outils de remote support ou des plateformes cloud/ML sont directement exposés ; audit des accès privilégiés requis.</em>
+🔗 https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/</p>
+<p><strong>ShinyHunters – brèche PeopleSoft à la NAIC</strong>
+Le groupe ShinyHunters a compromis un système PeopleSoft et exfiltré des données publiques de la NAIC.
+<em>Impact : les instances PeopleSoft utilisées en RH ou finance dans le secteur pharma doivent être auditées – vecteur d'attaque documenté et reproductible.</em>
+🔗 https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/</p>
+<p><strong>Faille Amazon Q (extension VS Code) – vol de credentials cloud</strong>
+Une vulnérabilité dans l'extension VS Code d'Amazon Q permet le vol de credentials cloud via l'environnement de développement.
+<em>Impact : les équipes data/IT pharma utilisant Amazon Q ou des extensions IDE connectées au cloud doivent vérifier leurs configurations et politiques d'autorisation.</em>
+🔗 https://www.darkreading.com/cloud-security/amazon-q-vs-extension-leads-cloud-credential-theft</p>
+<p><strong>Agentic AI – problème d'identité exploitable par les attaquants</strong>
+Les agents IA autonomes souffrent d'une gestion insuffisante des identités et des permissions, créant une surface d'attaque nouvelle.
+<em>Impact : en pharma, où les agents IA commencent à accéder à des systèmes réglementés (LIMS, EDC, ERP), l'absence de contrôle d'identité granulaire constitue un risque de conformité et de sécurité.</em>
+🔗 https://www.bleepingcomputer.com/news/security/agentic-ai-has-an-identity-problem-and-attackers-know-it/</p>
+<p><strong>PoC public pour CVE-2026-55200 – faille libssh2 côté client</strong>
+Un exploit public est désormais disponible pour cette faille critique de la bibliothèque libssh2, utilisée dans de nombreux outils DevOps et d'automatisation.
+<em>Impact : les pipelines CI/CD et outils d'automatisation pharma (déploiement, transfert de données) intégrant libssh2 doivent être patchés sans délai.</em>
+🔗 https://thehackernews.com/2026/06/public-poc-released-for-critical.html</p>
+<hr />
+<h2>💊 Pharma / Santé</h2>
+<p><strong>FDA – CRL pour Sobi (goute) : cause manufacturing</strong>
+La FDA rejette le médicament combiné de Sobi dans la goutte en raison de défauts de fabrication, protégeant de fait le blockbuster d'Amgen.
+<em>Impact : rappel que la conformité CMC reste un facteur bloquant majeur à l'approbation ; les équipes manufacturing doivent anticiper les exigences FDA dès la phase de scale-up.</em>
+🔗 https://endpoints.news/sobi-receives-crl-for-gout-combination-drug-over-manufacturing/</p>
+<p><strong>Dr. Reddy's – Form 483 avec 7 observations sur le site biologiques d'Hyderabad</strong>
+La FDA émet 7 observations lors d'une inspection du site biologiques de Dr. Reddy's, signalant des manquements qualité significatifs.
+<em>Impact : signal fort sur la vigilance accrue de la FDA sur les sites biologiques offshore ; les groupes pharma ayant des CDMO en Inde doivent revoir leurs audits fournisseurs.</em>
+🔗 https://www.fiercepharma.com/manufacturing/fda-slaps-dr-reddys-hyderabad-biologics-plant-seven-observations-new-form-483</p>
+<p><strong>Gilead – Trodelvy approuvé en première ligne TNBC</strong>
+La FDA accorde une approbation élargie à Trodelvy (sacituzumab govitecan) en première ligne dans le cancer du sein triple négatif, intensifiant la guerre des ADC TROP2.
+<em>Impact : repositionnement stratégique majeur sur le marché des ADC ; à surveiller pour les groupes actifs en oncologie mammaire et pour benchmarker les dossiers réglementaires ADC.</em>
+🔗 https://www.fiercepharma.com/pharma/gilead-trodelvy-nabs-broad-fda-approval-front-line-tnbc-fueling-trop2-adc-market-war</p>
+<p><strong>NEJM rétracte des données pivots pour Tavneos (Amgen) + retournement CHMP</strong>
+Le NEJM rétracte les données clés de l'essai ayant soutenu l'approbation de Tavneos, et le CHMP européen annule sa recommandation favorable.
+<em>Impact : cas d'école sur l'intégrité des données cliniques et la vigilance post-approbation ; illustre le risque réglementaire bilatéral (FDA + EMA) en cas de remise en cause des données sources.</em>
+🔗 https://endpoints.news/nejm-retracts-pivotal-data-for-amgens-tavneos/ | https://www.fiercepharma.com/pharma/chmp-reverses-marketing-recommendation-amgens-tavneos-fda-hearing-looms</p>
+<p><strong>Boehringer Ingelheim – deal $15M avec Immunai pour plateforme IA immunologie</strong>
+Boehringer rejoint la liste des Big Pharma investissant dans la plateforme IA d'Immunai pour la découverte en immunologie.
+<em>Impact : confirmation de la tendance Big Pharma à externaliser l'IA de découverte via des deals ciblés ; modèle à évaluer pour accélérer les programmes immunologie/inflammatoire.</em>
+🔗 https://www.fiercebiotech.com/biotech/15m-discovery-deal-boehringer-becomes-latest-big-pharma-buy-immunais-ai-platform</p>
+<p><strong>Sword Health – IA de kinésithérapie déployée à l'échelle d'un pays entier (Portugal)</strong>
+Sword Health signe un contrat national au Portugal pour déployer sa thérapie physique assistée par IA à l'ensemble de la population.
+<em>Impact : premier cas documenté de déploiement d'une IA de santé à l'échelle nationale ; modèle de référence pour les stratégies de santé digitale et les partenariats public/pharma en Europe.</em>
+🔗 https://www.statnews.com/2026/06/29/sword-health-portugal-deal-ai-supported-physical-therapy/</p>
+<hr />
+<h2>👁️ À surveiller</h2>
+<ol>
+<li>
+<p><strong>Oracle EBS + PeopleSoft comme vecteurs d'attaque coordonnés</strong> : deux systèmes ERP critiques en pharma exploités simultanément par des groupes distincts – une tendance à surveiller pour les prochains Patch Tuesday Oracle et les audits de surface d'attaque ERP.</p>
+</li>
+<li>
+<p><strong>Intégrité des données cliniques post-approbation</strong> : l'affaire Tavneos (rétractation NEJM + CHMP + FDA hearing) pourrait faire jurisprudence sur les exigences de vérification des données sources et de data integrity dans les dossiers réglementaires.</p>
+</li>
+<li>
+<p><strong>Sécurité des agents IA dans les environnements réglementés</strong> : à mesure que les agents IA accèdent à des systèmes GxP (LIMS, EDC, ERP), l'absence de standards d'identité pour les entités non-humaines devient un angle mort réglementaire et sécuritaire à anticiper (FDA, EMA, ICH Q9/Q10).</p>
+</li>
+</ol>
+<hr />
+<h2>Annexe : collecte brute</h2>
+<h3>Cyber</h3>
+<ul>
+<li><strong>[priorité]</strong> <a href="https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html">Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild</a> — The Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://www.darkreading.com/cyberattacks-data-breaches/djinn-stealer-targets-cloud-ai-credentials">'Djinn' Stealer Targets Cloud, AI Credentials</a> — Dark Reading</li>
+<li><strong>[priorité]</strong> <a href="https://www.darkreading.com/vulnerabilities-threats/vulnerabilities-private-data-indian-government-systems">Vulnerabilities Expose Private Data in Indian Government Systems</a> — Dark Reading</li>
+<li><strong>[priorité]</strong> <a href="https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/">Nissan discloses employee data breach linked to Oracle zero-day attacks</a> — BleepingComputer</li>
+<li><strong>[priorité]</strong> <a href="https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/">NAIC says public data stolen in ShinyHunters' PeopleSoft breach</a> — BleepingComputer</li>
+<li><strong>[priorité]</strong> <a href="https://www.darkreading.com/ics-ot-security/iran-russia-china-target-water-systems-sabotage">Iran, Russia, China Target Water Systems for Sabotage</a> — Dark Reading</li>
+<li><strong>[priorité]</strong> <a href="https://thehackernews.com/2026/06/malicious-perplexity-chrome-extension.html">Malicious Perplexity Chrome Extension Intercepted Searches and Address Bar Input</a> — The Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://thehackernews.com/2026/06/mustang-panda-uses-zoho-workdrive-as.html">Mustang Panda Uses Zoho WorkDrive as Command Channel in Indian Government Attacks</a> — The Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://thehackernews.com/2026/06/weekly-recap-linux-kernel-flaws-ai.html">⚡ Weekly Recap: Linux Kernel Flaws, AI Malware Tricks, Turla Backdoor, Infostealers and More</a> — The Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://www.bleepingcomputer.com/news/security/agentic-ai-has-an-identity-problem-and-attackers-know-it/">Agentic AI Has an Identity Problem and Attackers Know It</a> — BleepingComputer</li>
+<li><strong>[priorité]</strong> <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/">Critical SimpleHelp flaw exploited to deploy new stealer malware</a> — BleepingComputer</li>
+<li><strong>[priorité]</strong> <a href="https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/">Hackers now exploit critical Oracle E-Business flaw in attacks</a> — BleepingComputer</li>
+<li><strong>[priorité]</strong> <a href="https://www.bleepingcomputer.com/news/security/webinar-why-business-email-compromise-attacks-keep-succeeding/">Webinar: Why business email compromise attacks keep succeeding</a> — BleepingComputer</li>
+<li><strong>[priorité]</strong> <a href="https://www.darkreading.com/cloud-security/amazon-q-vs-extension-flaw-leads-cloud-credential-theft">Amazon Q VS Extension Flaw Leads to Cloud Credential Theft</a> — Dark Reading</li>
+<li><strong>[priorité]</strong> <a href="https://thehackernews.com/2026/06/gamaredon-expands-ukraine-attacks-with.html">Gamaredon Expands Ukraine Attacks with New Malware and Cloud Service Abuse</a> — The Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://thehackernews.com/2026/06/public-poc-released-for-critical.html">Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw</a> — The Hacker News</li>
+<li><a href="https://isc.sans.edu/diary/rss/33112">ISC Stormcast For Tuesday, June 30th, 2026 https://isc.sans.edu/podcastdetail/9988, (Tue, Jun 30th)</a> — SANS ISC</li>
+<li><a href="https://www.darkreading.com/cyber-risk/clothes-invisible-facial-recognition">Can Clothes Make You Invisible to Facial Recognition?</a> — Dark Reading</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/whatsapp-rolls-out-usernames-to-help-users-hide-their-phone-number/">WhatsApp rolls out usernames to help users hide their phone number</a> — BleepingComputer</li>
+<li><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-extends-windows-server-2022-hotpatching-until-october-2027/">Microsoft extends Windows Server 2022 hotpatching until October 2027</a> — BleepingComputer</li>
+<li><a href="https://thehackernews.com/2026/06/whatsapp-is-finally-getting-usernames.html">WhatsApp is Finally Getting Usernames to Help Keep Phone Numbers Private</a> — The Hacker News</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/us-offers-10-million-for-hackers-targeting-whatsapp-signal-users/">U.S. offers $10 million for hackers targeting WhatsApp, Signal users</a> — BleepingComputer</li>
+<li><a href="https://isc.sans.edu/diary/rss/33110">Adding some Automation to the favicon.ico method of Host Recon, (Mon, Jun 29th)</a> — SANS ISC</li>
+<li><a href="https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html">236,000 DCloud Uni-App Sites Used in Crypto Scams, Phishing, and Wallet Drainers</a> — The Hacker News</li>
+<li><a href="https://thehackernews.com/2026/06/why-post-quantum-cryptography-starts.html">Why Post-Quantum Cryptography Starts With Credentials</a> — The Hacker News</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/us-seizes-hundreds-of-fifa-world-cup-illegal-streaming-domains/">US seizes hundreds of FIFA World Cup illegal streaming domains</a> — BleepingComputer</li>
+<li><a href="https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html">Microsoft Removes 119 Edge Extensions That Hid Malware in Images and Fonts</a> — The Hacker News</li>
+</ul>
+<h3>IT / Tech</h3>
+<ul>
+<li><strong>[priorité]</strong> <a href="https://moondream.ai/blog/popping-the-gpu-bubble">Popping the GPU Bubble</a> — Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://arstechnica.com/ai/2026/06/south-korea-to-spend-1t-on-more-memory-chip-production-and-humanoid-robots/">South Korea to spend $1T on more memory chip production and humanoid robots</a> — Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/">.self: A new top-level domain designed to support self-hosting</a> — Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://github.com/deepreinforce-ai/Ornith-1">Ornith-1.0: self-improving open-source models for agentic coding</a> — Hacker News</li>
+<li><strong>[priorité]</strong> <a href="https://htmx.org/essays/working-with-ai/">Working With AI: A concrete example</a> — Hacker News</li>
+<li><a href="https://med.stanford.edu/news/all-news/2025/09/daylight-saving-time.html">Study suggests most Americans would be healthier without daylight saving time</a> — Hacker News</li>
+<li><a href="https://obsolescence.dev/pdp1-lisp-introduction.html">Exploring PDP-1 Lisp (1960)</a> — Hacker News</li>
+<li><a href="https://fil-c.org/context_switches">Memory Safe Context Switching</a> — Hacker News</li>
+<li><a href="https://longcat.chat/blog/longcat-2.0/">LongCat-2.0, a large-scale MoE model with 1.6T total and 48B Active</a> — Hacker News</li>
+<li><a href="https://quesma.com/blog/qwen-36-is-awesome/">Qwen 3.6 27B is the sweet spot for local development</a> — Hacker News</li>
+<li><a href="https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision">US Supreme Court rules geofence warrants require constitutional protections</a> — Hacker News</li>
+<li><a href="https://probablymarcus.com/blocks/2026/06/28/native-graphical-shell-for-SSH.html">A native graphical shell for SSH</a> — Hacker News</li>
+<li><a href="https://humphri.es/blog/WATaBoy/">WATaBoy: JIT-Ing Game Boy Instructions to WASM Beats a Native Interpreter</a> — Hacker News</li>
+<li><a href="https://github.com/LinuxMD/linuxmd">Linux for the Sega MegaDrive</a> — Hacker News</li>
+<li><a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully">Rocketlab acquires Iridium</a> — Hacker News</li>
+<li><a href="https://fergusfinn.com/blog/what-happens-when-you-run-a-gpu-kernel/">What happens when you run a CUDA kernel?</a> — Hacker News</li>
+</ul>
+<h3>Pharma / Santé</h3>
+<ul>
+<li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/29/vijay-kumar-exits-fda-office-of-therapeutic-products/?utm_campaign=rss">STAT+: FDA’s top gene therapy regulator is leaving his role</a> — STAT News</li>
+<li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/29/new-fda-peptide-advisers-compounding-committee-conflicts/?utm_campaign=rss">STAT+: Longevity, wellness physicians named to panel advising FDA on peptides</a> — STAT News</li>
+<li><strong>[priorité]</strong> <a href="https://www.statnews.com/pharmalot/2026/06/29/insulin-cap-revival-former-fda-cancer-drug-chief/?utm_campaign=rss">STAT+: Pharmalittle: We’re reading about a broader $35 insulin cap, a former FDA cancer drug chief, and more</a> — STAT News</li>
+<li><strong>[priorité]</strong> <a href="https://endpoints.news/sobi-receives-crl-for-gout-combination-drug-over-manufacturing/">Sobi receives CRL for gout combination drug over manufacturing</a> — Endpoints News</li>
+<li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/29/clive-meanwell-population-health-partners-on-ai-biotech/?utm_campaign=rss">STAT+: Investor Clive Meanwell on designing biotechs for population health, and AI’s role as a catalyst</a> — STAT News</li>
+<li><strong>[priorité]</strong> <a href="https://www.statnews.com/2026/06/29/sword-health-portugal-deal-ai-supported-physical-therapy/?utm_campaign=rss">STAT+: Sword Health contracted to provide AI-supported physical therapy for an entire country</a> — STAT News</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/manufacturing/fda-rejects-sobi-gout-drug-over-manufacturing-issues-sparing-amgen-blockbuster"><a href="https://www.fiercepharma.com/manufacturing/fda-rejects-sobi-gout-drug-over-manufacturing-issues-sparing-amgen-blockbuster" hreflang="en">FDA rejects Sobi’s gout drug over manufacturing issues, sparing Amgen blockbuster</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026"><a href="https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026" hreflang="en">Regulatory tracker: FDA starts review of Sandoz's generic tirzepatide</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/pharma/look-out-amgen-here-comes-viridian-fda-nod-ted-med-lumvoa"><a href="https://www.fiercepharma.com/pharma/look-out-amgen-here-comes-viridian-fda-nod-ted-med-lumvoa" hreflang="en">Look out, Amgen. Here comes Viridian with FDA nod for TED med Lumvoa</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/sponsored/real-world-data-powers-next-gen-biopharma"><a href="https://www.fiercepharma.com/sponsored/real-world-data-powers-next-gen-biopharma" hreflang="en">Real-world data powers next-gen biopharma</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/manufacturing/fda-slaps-dr-reddys-hyderabad-biologics-plant-seven-observations-new-form-483"><a href="https://www.fiercepharma.com/manufacturing/fda-slaps-dr-reddys-hyderabad-biologics-plant-seven-observations-new-form-483" hreflang="en">FDA slaps Dr. Reddy's Hyderabad biologics plant with seven observations in new Form 483</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/pharma/chmp-reverses-marketing-recommendation-amgens-tavneos-fda-hearing-looms"><a href="https://www.fiercepharma.com/pharma/chmp-reverses-marketing-recommendation-amgens-tavneos-fda-hearing-looms" hreflang="en">Europe's CHMP reverses endorsement of Tavneos as Amgen FDA hearing looms</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/marketing/eli-lilly-taps-ai-being-personal-memories-life-during-its-european-radio-show-road-trip"><a href="https://www.fiercepharma.com/marketing/eli-lilly-taps-ai-being-personal-memories-life-during-its-european-radio-show-road-trip" hreflang="en">Eli Lilly taps AI to bring personal memories to life during its European radio show road trip</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/marketing/fda-shines-harsh-light-pinnacle-after-finding-fault-photodynamic-therapy-videos"><a href="https://www.fiercepharma.com/marketing/fda-shines-harsh-light-pinnacle-after-finding-fault-photodynamic-therapy-videos" hreflang="en">FDA shines harsh light on Pinnacle after finding fault with photodynamic therapy videos</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/pharma/ionis-scores-landmark-fda-label-expansion-tryngolza"><a href="https://www.fiercepharma.com/pharma/ionis-scores-landmark-fda-label-expansion-tryngolza" hreflang="en">Ionis scores transformational FDA label expansion for Tryngolza</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/manufacturing/jubilant-hollisterstier-gets-fda-warning-letter-quality-control-problems"><a href="https://www.fiercepharma.com/manufacturing/jubilant-hollisterstier-gets-fda-warning-letter-quality-control-problems" hreflang="en">Jubilant HollisterStier gets FDA warning letter for quality control problems</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercepharma.com/pharma/gilead-trodelvy-nabs-broad-fda-approval-front-line-tnbc-fueling-trop2-adc-market-war"><a href="https://www.fiercepharma.com/pharma/gilead-trodelvy-nabs-broad-fda-approval-front-line-tnbc-fueling-trop2-adc-market-war" hreflang="en">Gilead’s Trodelvy nabs broad FDA approval in front-line TNBC, fueling TROP2 ADC market war</a></a> — Fierce Pharma</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/manufacturing/fda-rejects-sobi-gout-drug-over-manufacturing-issues-sparing-amgen-blockbuster"><a href="https://www.fiercebiotech.com/manufacturing/fda-rejects-sobi-gout-drug-over-manufacturing-issues-sparing-amgen-blockbuster" hreflang="en">FDA rejects Sobi’s gout drug over manufacturing issues, sparing Amgen blockbuster</a></a> — Fierce Biotech</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/medtech/united-therapeutics-nabs-fda-approval-donor-lungs-assessment-device"><a href="https://www.fiercebiotech.com/medtech/united-therapeutics-nabs-fda-approval-donor-lungs-assessment-device" hreflang="en">United Therapeutics nabs FDA approval for donor-lung assessment device  </a></a> — Fierce Biotech</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/medtech/production-problems-hamper-lantheus-bid-fda-approval-radiopharma-dx-kit"><a href="https://www.fiercebiotech.com/medtech/production-problems-hamper-lantheus-bid-fda-approval-radiopharma-dx-kit" hreflang="en">Production problems hamper Lantheus bid for FDA approval of radiopharma dx kit</a></a> — Fierce Biotech</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/biotech/otsuka-posts-phase-3b-adhd-trial-win-ahead-looming-fda-approval-decision"><a href="https://www.fiercebiotech.com/biotech/otsuka-posts-phase-3b-adhd-trial-win-ahead-looming-fda-approval-decision" hreflang="en">Otsuka posts phase 3b ADHD trial win ahead of looming FDA approval decision</a></a> — Fierce Biotech</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/biotech/15m-discovery-deal-boehringer-becomes-latest-big-pharma-buy-immunais-ai-platform"><a href="https://www.fiercebiotech.com/biotech/15m-discovery-deal-boehringer-becomes-latest-big-pharma-buy-immunais-ai-platform" hreflang="en">With $15M discovery deal, Boehringer becomes latest Big Pharma to buy into Immunai’s AI platform</a></a> — Fierce Biotech</li>
+<li><strong>[priorité]</strong> <a href="https://www.fiercebiotech.com/medtech/fda-drops-blood-pressure-device-enforcement-against-whoop"><a href="https://www.fiercebiotech.com/medtech/fda-drops-blood-pressure-device-enforcement-against-whoop" hreflang="en">FDA drops blood pressure device enforcement against Whoop</a></a> — Fierce Biotech</li>
+<li><a href="https://endpoints.news/nejm-retracts-pivotal-data-for-amgens-tavneos/">NEJM retracts pivotal data for Amgen's Tavneos</a> — Endpoints News</li>
+<li><a href="https://www.statnews.com/pharmalot/2026/06/29/astrazeneca-kickback-charges-texas-settlement/?utm_campaign=rss">STAT+: AstraZeneca to pay $34 million to settle kickback charges filed by Texas attorney general</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/29/state-lawsuit-block-medicaid-work-requirements/?utm_campaign=rss">STAT+: 26 states sue to block Medicaid work requirements</a> — STAT News</li>
+<li><a href="https://endpoints.news/john-reed-on-jjs-rd-model-oncology-deals-and-pipeline-expansion-potential/">John Reed on J&amp;J’s R&amp;D model, oncology deals and pipeline expansion potential</a> — Endpoints News</li>
+<li><a href="https://www.statnews.com/2026/06/29/nutex-health-investigation-takeaways-stat-news-no-surprises-act/?utm_campaign=rss">5 takeaways from STAT’s investigation into microhospital operator Nutex Health</a> — STAT News</li>
+<li><a href="https://endpoints.news/eu-lobby-urges-member-states-to-improve-europes-life-sciences-sector/">EU lobby urges member states to improve Europe’s life sciences sector</a> — Endpoints News</li>
+<li><a href="https://www.statnews.com/2026/06/29/healthcare-news-unredacted-ca-hospital-lawsuit-sad-mckinsey-tax/?utm_campaign=rss">STAT+: Unredacted comments from California hospital lawsuits show stunning admissions and a ‘forced’ McKinsey collaboration</a> — STAT News</li>
+<li><a href="https://endpoints.news/zymeworks-ceo-on-why-the-theravance-deal-is-value-for-money/">Zymeworks CEO on why the Theravance deal is value for money</a> — Endpoints News</li>
+<li><a href="https://endpoints.news/biocryst-ends-internal-discovery-programs-will-close-alabama-research-facility/">BioCryst ends internal discovery programs, will close Alabama research facility</a> — Endpoints News</li>
+<li><a href="https://endpoints.news/evommunes-lead-drug-fails-in-chronic-hives-stock-sinks/">Evommune's lead drug fails in chronic hives, stock sinks</a> — Endpoints News</li>
+<li><a href="https://endpoints.news/biotech-spac-deal-gets-it-to-nasdaq-astrazeneca-phase-3-win-in-bone-disease/">Biotech SPAC deal gets it to Nasdaq; AstraZeneca Phase 3 win in bone disease</a> — Endpoints News</li>
+<li><a href="https://www.statnews.com/2026/06/29/biotech-news-talawar-bets-bispecific-approach-for-eczema/?utm_campaign=rss">STAT+: Talawar bets bispecific approach can shake up eczema market</a> — STAT News</li>
+<li><a href="https://endpoints.news/post-hoc-china-deals-are-pharmas-new-tax-inversions/">Post-Hoc: China deals are pharma’s new tax inversions</a> — Endpoints News</li>
+<li><a href="https://www.statnews.com/2026/06/29/health-news-whats-next-for-988-lgbtq-services/?utm_campaign=rss">What’s next for 988 LGBTQ+ services?</a> — STAT News</li>
+<li><a href="https://endpoints.news/ipsen-to-buy-blood-cancer-company-kartos-therapeutics-for-450m-upfront/">Ipsen to buy blood cancer company Kartos Therapeutics for $450M upfront</a> — Endpoints News</li>
+<li><a href="https://endpoints.news/zymeworks-to-acquire-troubled-biotech-theravance-in-929m-deal/">Zymeworks to acquire troubled biotech Theravance in $929M deal</a> — Endpoints News</li>
+<li><a href="https://www.statnews.com/2026/06/29/moderna-founder-kenneth-chien-on-cancer-vaccine-and-mrna-future/?utm_campaign=rss">STAT+: Moderna co-founder Kenneth Chien on the future of mRNA — and Moderna</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/29/china-biotech-perpetual-foreigner-chinese-american-scientists/?utm_campaign=rss">Opinion: STAT+: The U.S.-China biotech crackdown may hurt the scientists America needs the most</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/29/gender-affirming-care-trans-youth-plastic-surgeons-statement/?utm_campaign=rss">Opinion: Banning gender-affirming care doesn’t protect children — it makes it harder to help them</a> — STAT News</li>
+<li><a href="https://www.statnews.com/2026/06/29/nutex-health-micro-hospitals-er-loophole-idr-profits/?utm_campaign=rss">STAT+: The ERs that can turn patients away — and are reaping millions</a> — STAT News</li>
+<li><a href="https://www.fiercepharma.com/pharma/zymeworks-acquires-struggling-theravance-929m"><a href="https://www.fiercepharma.com/pharma/zymeworks-acquires-struggling-theravance-929m" hreflang="en">Zymeworks acquires struggling Theravance for $929M</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill"><a href="https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill" hreflang="en">The Oral GLP-1 Tracker: Lilly takes time to build awareness for Foundayo as generic tirzepatide looms</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/sanofi-subject-antitrust-probe-ec-kicks-formal-proceedings"><a href="https://www.fiercepharma.com/pharma/sanofi-subject-antitrust-probe-ec-kicks-formal-proceedings" hreflang="en">Sanofi under antitrust probe as European Commission kicks off formal proceedings</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/marketing/pharmas-cannes-do-attitude-sees-industry-return-triumph"><a href="https://www.fiercepharma.com/marketing/pharmas-cannes-do-attitude-sees-industry-return-triumph" hreflang="en">Pharma’s Cannes-do attitude sees industry return to triumph </a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/historic-solid-tumor-car-t-nod-inside-pfizer-innovent-10b-pact-more-china-deals"><a href="https://www.fiercepharma.com/pharma/historic-solid-tumor-car-t-nod-inside-pfizer-innovent-10b-pact-more-china-deals" hreflang="en">Fierce Pharma Asia—Historic solid tumor CAR-T nod; Inside Pfizer, Innovent’s $10B pact; More China deals</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/marketing/biogen-launches-ready-more-hd-spinraza-campaign-focus-how-we-see-sma"><a href="https://www.fiercepharma.com/marketing/biogen-launches-ready-more-hd-spinraza-campaign-focus-how-we-see-sma" hreflang="en">Biogen launches ‘Ready for More’ HD Spinraza campaign with a focus on how we see SMA</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/marketing/beone-boosts-support-blood-cancer-united-5m-commitment"><a href="https://www.fiercepharma.com/marketing/beone-boosts-support-blood-cancer-united-5m-commitment" hreflang="en">BeOne boosts support for Blood Cancer United with $5M commitment</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/fosun-pharma-plots-global-push-beyond-oncology-fueled-multi-asset-alzheimers-strategy"><a href="https://www.fiercepharma.com/pharma/fosun-pharma-plots-global-push-beyond-oncology-fueled-multi-asset-alzheimers-strategy" hreflang="en">Fosun Pharma plots global push beyond oncology, fueled by multi-asset Alzheimer’s strategy</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/bayer-scores-major-win-scotus-overturns-roundup-verdict"><a href="https://www.fiercepharma.com/pharma/bayer-scores-major-win-scotus-overturns-roundup-verdict" hreflang="en">Bayer scores landmark victory as Supreme Court overturns Roundup verdict</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/merck-kgaa-throws-down-113b-bio-techne-biggest-deal-2015-sigma-aldrich-buy"><a href="https://www.fiercepharma.com/pharma/merck-kgaa-throws-down-113b-bio-techne-biggest-deal-2015-sigma-aldrich-buy" hreflang="en">Merck KGaA throws down $11.3B for Bio-Techne in its biggest deal since 2015 Sigma-Aldrich buy</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/marketing/novartis-teams-becoming-rentable-its-new-sma-campaign"><a href="https://www.fiercepharma.com/marketing/novartis-teams-becoming-rentable-its-new-sma-campaign" hreflang="en">Novartis teams up with Becoming rentABLE for its new SMA campaign </a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/marketing/astrazeneca-spells-out-community-cancer-screening-strategy-ymca"><a href="https://www.fiercepharma.com/marketing/astrazeneca-spells-out-community-cancer-screening-strategy-ymca" hreflang="en">AstraZeneca spells out a community cancer screening strategy with the YMCA</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/biotech/mapp-gilead-antivirals-be-deployed-drc-ebola-trial-who-chief"><a href="https://www.fiercepharma.com/biotech/mapp-gilead-antivirals-be-deployed-drc-ebola-trial-who-chief" hreflang="en">Mapp, Gilead antivirals to be deployed in DRC Ebola trial: WHO chief</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercepharma.com/pharma/pfizer-scores-its-first-expansion-7-years-breast-cancer-blockbuster-ibrance"><a href="https://www.fiercepharma.com/pharma/pfizer-scores-its-first-expansion-7-years-breast-cancer-blockbuster-ibrance" hreflang="en">Pfizer scores 1st expansion in 7 years for breast cancer blockbuster Ibrance</a></a> — Fierce Pharma</li>
+<li><a href="https://www.fiercebiotech.com/biotech/biocryst-ends-internal-discovery-programs-pivot-cost-saving-partnerships"><a href="https://www.fiercebiotech.com/biotech/biocryst-ends-internal-discovery-programs-pivot-cost-saving-partnerships" hreflang="en">BioCryst ends internal discovery programs, closes Alabama facility in pivot to cost-saving partnerships</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/evommunes-phase-2b-flops-ending-challenge-novartis-hives"><a href="https://www.fiercebiotech.com/biotech/evommunes-phase-2b-flops-ending-challenge-novartis-hives" hreflang="en">Evommune’s phase 2b trial flops, ending challenge to Novartis in hives</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/medtech/roche-launches-eagerly-awaited-illumina-gene-sequencing-platform-rival-axelios-1"><a href="https://www.fiercebiotech.com/medtech/roche-launches-eagerly-awaited-illumina-gene-sequencing-platform-rival-axelios-1" hreflang="en">Roche launches Axelios 1, its eagerly awaited gene sequencing rival to Illumina</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/ipsen-pens-17b-deal-acquire-kartos-potential-jakafi-add-therapy-myelofibrosis"><a href="https://www.fiercebiotech.com/biotech/ipsen-pens-17b-deal-acquire-kartos-potential-jakafi-add-therapy-myelofibrosis" hreflang="en">Ipsen pens $1.7B deal to acquire Kartos for potential Jakafi add-on therapy for myelofibrosis</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/uk-based-scancell-bids-nasdaq-listed-neuphoria-increase-profile-us-investors"><a href="https://www.fiercebiotech.com/biotech/uk-based-scancell-bids-nasdaq-listed-neuphoria-increase-profile-us-investors" hreflang="en">UK-based Scancell bids to buy Nasdaq-listed Neuphoria to ‘increase profile’ with US investors</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/preclinical-bispecific-company-talawar-heads-nasdaq-spac-support-eczema-asset"><a href="https://www.fiercebiotech.com/biotech/preclinical-bispecific-company-talawar-heads-nasdaq-spac-support-eczema-asset" hreflang="en">'There's room for multiple winners': Talawar heads to Nasdaq via SPAC deal to bankroll eczema asset</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/astrazeneca-unveils-phase-3-bone-disease-data-behind-5b-forecast-strensiq-successor"><a href="https://www.fiercebiotech.com/biotech/astrazeneca-unveils-phase-3-bone-disease-data-behind-5b-forecast-strensiq-successor" hreflang="en">AstraZeneca unveils phase 3 bone disease data behind $5B forecast for Strensiq successor</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/cash-strapped-alopexx-reignites-plans-go-public-30m-ipo-fund-infectious-disease-programs"><a href="https://www.fiercebiotech.com/biotech/cash-strapped-alopexx-reignites-plans-go-public-30m-ipo-fund-infectious-disease-programs" hreflang="en">Cash-strapped Alopexx reignites plans to go public via $30M IPO to fund infectious disease programs</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/epicrispr-gene-silencer-becomes-first-enhance-muscle-form-muscular-dystrophy"><a href="https://www.fiercebiotech.com/biotech/epicrispr-gene-silencer-becomes-first-enhance-muscle-form-muscular-dystrophy" hreflang="en">Epicrispr gene silencer is 1st drug to boost muscle in form of muscular dystrophy, biotech says</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026"><a href="https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026" hreflang="en">Fierce Biotech Layoff Tracker 2026: BioCryst ends internal programs; Biogen sheds Apellis R&amp;D roles</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/biogen-ends-apellis-research-programs-cuts-small-number-roles-after-56b-buyout"><a href="https://www.fiercebiotech.com/biotech/biogen-ends-apellis-research-programs-cuts-small-number-roles-after-56b-buyout" hreflang="en">Biogen ends Apellis research programs, cuts ‘small number’ of roles after $5.6B buyout</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/deal-deal"><a href="https://www.fiercebiotech.com/biotech/deal-deal" hreflang="en">The deal before the deal </a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/moderna-enters-vivo-car-t-granting-autoimmune-asset-007-license-kill-pathogenic-cells"><a href="https://www.fiercebiotech.com/biotech/moderna-enters-vivo-car-t-granting-autoimmune-asset-007-license-kill-pathogenic-cells" hreflang="en">Moderna enters in vivo CAR-T, granting autoimmune asset ‘007’ license to kill pathogenic cells</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/fierce-biotech-fundraising-tracker-26"><a href="https://www.fiercebiotech.com/biotech/fierce-biotech-fundraising-tracker-26" hreflang="en">Fierce Biotech Fundraising Tracker '26: Lycia raises $75M; Oblenio reels in $62M</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/chutes-ladders-emd-serono-taps-new-commercial-strategy-head"><a href="https://www.fiercebiotech.com/biotech/chutes-ladders-emd-serono-taps-new-commercial-strategy-head" hreflang="en">Chutes &amp; Ladders—EMD Serono taps in new commercial strategy head</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/medtech/cardiac-medtech-heartbeam-drops-ceo-eno-part-corporate-restructuring"><a href="https://www.fiercebiotech.com/medtech/cardiac-medtech-heartbeam-drops-ceo-eno-part-corporate-restructuring" hreflang="en">Cardiac medtech HeartBeam drops CEO in restructuring aimed at global ECG platform push</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/how-ibio-aims-stand-out-obesity-targeting-both-sides-equation-antibody-discovery"><a href="https://www.fiercebiotech.com/biotech/how-ibio-aims-stand-out-obesity-targeting-both-sides-equation-antibody-discovery" hreflang="en">How iBio aims to stand out in obesity by targeting ‘both sides of the equation’ for antibody discovery</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/pharma/fosun-pharma-plots-global-push-beyond-oncology-fueled-multi-asset-alzheimers-strategy"><a href="https://www.fiercebiotech.com/pharma/fosun-pharma-plots-global-push-beyond-oncology-fueled-multi-asset-alzheimers-strategy" hreflang="en">Fosun Pharma plots global push beyond oncology, fueled by multi-asset Alzheimer’s strategy</a></a> — Fierce Biotech</li>
+<li><a href="https://www.fiercebiotech.com/biotech/bio-how-gut-feeling-transformed-cancer-treatment-forever"><a href="https://www.fiercebiotech.com/biotech/bio-how-gut-feeling-transformed-cancer-treatment-forever" hreflang="en">BIO 2026: How a gut feeling transformed cancer treatment forever</a></a> — Fierce Biotech</li>
+</ul>
+</section>
 <section id="veille-2026-06-29">
 <h2>Veille tech — 2026-06-29</h2>
 <h1>Veille tech — 2026-06-29</h1>
